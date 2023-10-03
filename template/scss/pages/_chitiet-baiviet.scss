@@ -1,0 +1,110 @@
+.chitiet-baiviet {
+    background-color: #062347;
+    width: 100%;
+    margin: -20px;
+    text-align: left;
+    font-family: Noto Sans;
+
+    h2 {
+        text-align: left;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+
+        background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h4 {
+        text-align: left;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+
+        background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        padding-bottom: 15px;
+        color: #CCC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+
+        .text-highlight {
+            background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &-left {
+        width: 792px;
+        max-width: 100%;
+        padding: 20px;
+
+        &-content {
+            width: 100%;
+        }
+        .author {
+            padding-top: 15px;
+            padding-bottom: 24px;
+            width: 100%;
+            color: #CCC;
+            font-family: Noto Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &-dot {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #C4C4C4;
+            }
+        }
+
+        &-img {
+            width: 100%;
+            border-radius: 5px;
+            padding-bottom: 30px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-share {
+            width: 100%;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            .icon-social {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &-right {
+        width: 368px;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+}

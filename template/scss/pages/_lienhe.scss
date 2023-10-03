@@ -1,0 +1,246 @@
+@mixin textStyle() {
+    color: #FFF;
+    font-family: Noto Sans;
+    font-style: normal;
+}
+
+h4 {
+    @include textStyle();
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 48px;
+
+    background: var(--linear-1, linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    @include textStyle();
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
+}
+
+.red {
+    color: red;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.lienhe {
+    background-color: #052143;
+    padding-bottom: 120px;
+
+    &-content {
+        display: flex;
+        margin: -12px;
+        width: 100%;
+        justify-content: center;
+
+        &-left {
+            padding: 12px;
+            width: (100% / 2);
+        }
+
+        &-right {
+            padding: 12px;
+            width: (100% / 2);
+            display: flex;
+            justify-content: center;
+
+            .form-lienhe {
+                padding: 48px 28px;
+                @include textStyle();
+                width: calc(100% - 24px);
+                color: #052143;
+                font-weight: 700;
+                border-radius: 10px;
+                background: #FFF;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                &-element {
+                    padding: 16px;
+                    padding-bottom: 44px;
+                    width: (100% / 2);
+
+                    &:nth-child(5) {
+                        width: 100%;
+                        padding-bottom: 60px;
+                    }
+                }
+
+                &-text {}
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px #DADADA solid;
+
+                    &:focus {
+                        outline: none;
+                        border-width: 1px;
+                        border-image: linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+                        border-image-slice: 1;
+
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px #DADADA solid;
+
+                    &:focus {
+                        outline: none;
+                        border-width: 1px;
+                        border-image: linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+                        border-image-slice: 1;
+
+                    }
+                }
+
+                .guithongtin-btn {
+                    width: calc(100% - 32px);
+                    outline: none;
+                    border-radius: 100px;
+                    border: 1px solid #B66F29;
+                    background: linear-gradient(113deg, #FFCA43 -39%, #FFBE4D 260.71%);
+                    text-align: center;
+                    padding: 16px;
+                    margin: 0 auto;
+
+                    &-text {
+                        @include textStyle();
+                        color: #052143;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-title {
+        width: 1036px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+}
+
+.company-text {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.email {
+    @include textStyle();
+    color: #00A3FF;
+    font-family: Inter;
+    font-size: 16px;
+    letter-spacing: 0.128px;
+    text-decoration-line: underline;
+}
+
+.truso {
+    @include textStyle();
+    padding-top: 32px;
+    font-size: 16px;
+
+    &-title {
+        padding-bottom: 12px;
+        font-weight: 700;
+        background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-info {
+        padding-bottom: 8px;
+    }
+
+    &:last-child {
+        padding-top: 62px;
+        padding-bottom: 32px;
+    }
+}
+
+.xembando {
+    padding-top: 10px;
+    display: flex;
+    gap: 9px;
+    text-decoration: underline;
+
+    &-img {
+        width: 25.12px;
+        height: 24px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-text {
+        @include textStyle();
+        font-size: 16px;
+        line-height: 28.8px;
+
+        background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media screen and (max-width: 841px) {
+    .lienhe-content {
+        flex-wrap: wrap;
+        margin: unset;
+
+        &-left {
+            width: 100%;
+            padding: unset;
+        }
+        
+        &-right {
+            width: 100%;
+            padding: unset;
+
+            .form-lienhe {
+                width: 100%;
+
+                &-element {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .company-text {
+        text-align: center;
+    }
+
+    h4,
+    h2 {
+        font-size: 32px;
+    }
+
+
+}

@@ -1,0 +1,89 @@
+.chinhsach h3 {
+    color: #FFF;
+    font-family: "Noto Sans";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+
+.chinhsach p {
+    color: #FFF;
+    font-family: Noto Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+.chinhsach-text {
+    color: var(--White, #FFF);
+    text-align: left;
+    align-self: center;
+    font-family: Noto Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8rem;
+}
+
+.chinhsach {
+    padding: 6rem 0;
+    background-color: #052143;
+    width: 100%;
+
+    &-ctn {
+        width: 1396px;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    &-content {
+        margin: -1.25rem;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 255px;
+        gap: 1.5rem;
+        padding: 1.25rem;
+
+        a {
+            gap: 1rem;
+            display: flex;
+            align-items: center;
+
+        }
+    }
+
+    &-btn {
+        &.active {
+            border: 1px solid #B66F29;
+        }
+
+        &:hover {
+            border: 1px solid #B66F29;
+        }
+
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 100px;
+        background: rgba(182, 111, 41, 0.08);
+    }
+
+    &-right {
+        width: 100%;
+        max-width: 1101px;
+        padding: 1.25rem;
+    }
+
+    &-details {
+        padding: 1rem 0 2rem 0;
+    }
+}
