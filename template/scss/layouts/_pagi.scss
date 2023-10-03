@@ -1,0 +1,65 @@
+.page-numbers {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    margin-top: 1.6rem;
+    >li {
+        &:not(:first-child) {
+            margin-left: 8px;
+        }
+        &>.page-numbers {
+            width: 4.4rem;
+            height: 4.4rem;
+            border-radius: 100rem;
+            @include mid-flex;
+            background-color: transparent;
+            border: 0.1rem solid $color-border-01;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            color: $color-text;
+            font-size: 1.6rem;
+            transition: 0.4s;
+            @include affter($color-pri);
+            &:after {
+                z-index: -1;
+            }
+            @include max(1200px) {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.4rem;
+            }
+            @include hover {
+                &:not(.dot) {
+                    color: $color-white;
+                    &::after {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+            &.current {
+                color: $color-white;
+                font-weight: 400;
+                &::after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+            &.dot {
+                background-color: transparent;
+            }
+            &.next {
+                color: $color-pri;
+            }
+            &.prev {
+                color: $color-pri;
+            }
+            i {
+                font-weight: 400;
+            }
+        }
+    }
+}

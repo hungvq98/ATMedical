@@ -1,0 +1,148 @@
+.hamburger {
+    width: 35px;
+    overflow: hidden;
+    &-label {
+        position: relative;
+        display: block;
+        height: 28px;
+        cursor: pointer;
+        &::before,
+        &::after,
+        .hamburger-text {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: $color-second;
+        }
+        &::before,
+        &::after {
+            content: "";
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            top: 12px;
+        }
+    }
+    &-text {
+        top: 24px;
+        &::before {
+            content: "MENU";
+            position: absolute;
+            top: 5px;
+            right: 0;
+            left: 0;
+            color: $color-second;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &.active {
+        .hamburger-label:before {
+            left: -39px;
+        }
+        .hamburger-label:after {
+            left: 39px;
+        }
+        .hamburger-label .hamburger-text:before {
+            animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
+        }
+    }
+}
+
+@keyframes moveUpThenDown {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -27px;
+    }
+    100% {
+        top: -18px;
+    }
+}
+
+@keyframes shakeWhileMovingUp {
+    0% {
+        transform: rotateZ(0);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+@keyframes shakeWhileMovingDown {
+    0% {
+        transform: rotateZ(0);
+    }
+    80% {
+        transform: rotateZ(3deg);
+    }
+    90% {
+        transform: rotateZ(-3deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+
+.hamburger {
+    &.active {
+        .ham {
+            @include transform(rotate(45deg));
+
+            .top {
+                stroke-dashoffset: -98px;
+            }
+
+            .bottom {
+                stroke-dashoffset: -138px;
+            }
+        }
+    }
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: $color-white;
+        stroke-width: 5.5;
+        stroke-linecap: round;
+
+        @include max($res-mobile) {
+            stroke: $color-white;
+        }
+    }
+
+    .top {
+        stroke-dasharray: 40 140;
+    }
+
+    .bottom {
+        stroke-dasharray: 40 180;
+    }
+}

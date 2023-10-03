@@ -1,0 +1,228 @@
+.popup {
+    position: fixed;
+    @include full;
+    z-index: 80;
+    visibility: hidden;
+
+    &.open {
+        visibility: visible;
+
+        .popup-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-main {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &-overlay {
+        position: absolute;
+        background-color: rgba($color: $color-black, $alpha: 0.8);
+        @include full;
+        z-index: 1;
+        @include transitionRe;
+        opacity: 0;
+        visibility: hidden;
+        // backdrop-filter: blur(0.3rem)
+    }
+
+    &-main {
+        @include mid;
+        z-index: 2;
+        width: 90rem;
+        max-height: 90vh;
+        max-width: 95%;
+        @include transitionRe;
+        opacity: 0;
+        visibility: hidden;
+        position: relative;
+        // background-color: $color-white;
+        border-radius: 1.6rem;
+        // padding: 1rem 0;
+        background-color: $color-white;
+
+        &.med {
+            width: 90rem;
+        }
+
+        &.small {
+            width: 80rem;
+        }
+    }
+
+    &-over {
+        overflow-y: auto;
+        min-height: 40vh;
+        max-height: 80vh;
+    }
+
+    &-wrapper {
+        width: 100%;
+        min-height: 40vh;
+        position: relative;
+        border-radius: 6px;
+        @include mid-flex;
+    }
+
+    &-title {
+        @include fz-24;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1.6rem;
+    }
+
+    &-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        transition: 0.6s ease-in-out;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100rem;
+        @include mid-flex;
+        background-color: $color-pri;
+        z-index: 100;
+
+        &:hover {
+            .icon {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon {
+            color: $color-white;
+            font-weight: 300;
+            font-size: 2.4rem;
+            @include transition(0.6s, ease-in-out);
+
+            @include max(800px) {
+                @include fz-16;
+            }
+        }
+    }
+
+    &-search {
+        width: 100%;
+        padding: 1rem;
+        padding-top: 5rem;
+
+        &-box {
+            width: 40rem;
+
+            .popup-over {
+                max-height: 90vh;
+            }
+        }
+
+        &-input {
+            &::before {
+                content: '';
+                background-image: url("../assets/images/SEO-pana.png");
+                @include default-background;
+                width: 20rem;
+                height: 20rem;
+                display: block;
+                margin: auto;
+                margin-bottom: 1rem;
+            }
+
+            &.active {
+                &::before {
+                    display: none;
+                }
+            }
+
+            input {
+                width: 100%;
+                transition: 0.4s;
+                padding: 1rem 1.6rem;
+                border-radius: 100rem;
+                border: 0.1rem solid $color-pri;
+            }
+
+            .btn {
+                width: 100%;
+                border-radius: 100rem;
+                margin-top: 1rem;
+                height: 4.4rem;
+                justify-content: center;
+            }
+        }
+
+        position: relative;
+
+        .search-rs {
+            top: 27rem !important;
+            z-index: 20 !important;
+            position: unset !important;
+            max-height: 42rem !important;
+
+            .submit-search {
+                margin: auto;
+                margin-top: 3rem;
+                padding: 0.5rem 1rem;
+                background-color: $color-pri;
+                color: $color-white;
+                @include mid-flex;
+            }
+        }
+
+        .mona-search-form {}
+    }
+
+    &-bg {
+        padding: 5.6rem 7rem;
+        position: relative;
+        overflow: hidden;
+        .dc {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) translateX(50%);
+            z-index: 3;
+            width: calc(100vw*(448/1728));
+            height: calc(100vw*(448/1728));
+            pointer-events: none;
+            min-width: 30rem;
+            min-height: 30rem;
+            &-inner {
+                height: 100%;
+                width: 100%;
+                animation: Spinner 20s linear infinite;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(2253%) hue-rotate(194deg) brightness(81%) contrast(89%);
+                }
+            }
+        }
+
+        @include max(800px) {
+            padding: 4rem 2rem 2rem 2rem;
+        }
+
+        &-box {
+            width: 58.8rem;
+            border-radius: 0;
+            background-color: $color-white;
+        }
+
+        .form {
+            &-list {
+                @include min(1201px) {
+                    --gutter-y: 3rem
+                }
+            }
+        }
+
+        .bd-ln {
+            margin-top: 4rem;
+        }
+    }
+}

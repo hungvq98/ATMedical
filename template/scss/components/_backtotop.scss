@@ -1,0 +1,126 @@
+.back-to-top {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 100rem;
+    position: fixed;
+    bottom: 6rem;
+    right: 3rem;
+    z-index: 7;
+    transform: translateX(3rem);
+    opacity: 0;
+    transition: 0.5s linear;
+    cursor: pointer;
+    visibility: hidden;
+    @include max(1200px) {
+        width: 8rem;
+        height: 8rem;
+    }
+    @include max(768px) {
+        right: 1.5rem;
+    }
+
+    &.active {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+    .circle {
+        position: relative;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 100rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include max(1200px) {
+            width: 8rem;
+            height: 8rem;
+        }
+        .logo {
+            position: absolute;
+            width: 10rem;
+            height: 10rem;
+            background: url("../assets/images/ic-totop.svg");
+            background-size: cover;
+            border-radius: 100vmax;
+            background-position: center;
+            @include max(1200px) {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        .circle-txt {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: $color-text;
+            font-size: 1.3rem;
+            animation: textRotation 8s linear infinite;
+            @include font-second;
+        }
+
+        .circle-txt span {
+            position: absolute;
+            left: 50%;
+            font-size: 1.2em;
+            transform-origin: 0 9rem;
+            text-transform: uppercase;
+
+            @include max(1200px) {
+                transform-origin: 0 4rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+
+
+    @keyframes textRotation {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.fixedbar {
+    position: fixed;
+    bottom: 27rem;
+    @include flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 20;
+    right: 9rem;
+    @include max(1200px) {
+        right: 4rem;
+        bottom: 16rem;
+    }
+    @include max(768px) {
+        right: 2.5rem;
+        bottom: 15rem;
+    }
+
+    &-item {
+        position: relative;
+        width: 6rem;
+        height: 6rem;
+        @include mid-flex;
+        background-color: $color-pri;
+        border-radius: 100rem;
+        &::after {
+            @include pseudo;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 190, 254, 0.792);
+            border-radius: inherit;
+            animation:grows 2s linear infinite;
+        }
+        img {
+            border-radius: 0;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
