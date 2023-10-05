@@ -1,0 +1,54 @@
+.chitietcongviec-text {
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18.2px;
+    text-transform: uppercase;
+
+    background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.chitiet-tuyendung {
+    width: 100%;
+    background-color: #031831;
+
+    &-title {
+        @include flex(center, unset);
+        gap: 16px;
+        padding-bottom: 30px;
+    }
+    .tag-name {
+        padding: 4px 16px;
+        color: #FFF;
+        font-family: Noto Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 100px;
+        border: 1px solid #1E77DF;
+        backdrop-filter: blur(5px);
+    }
+    h3 {
+        padding-bottom: unset;
+    }
+
+    &-inner {
+        @include flex;
+        margin: 0 -12px;
+    }
+    &-left {
+        width: calc((9 / 16) * 100%);
+        padding: 0 12px;
+    }
+    &-right {
+        width: calc((3 / 16) * 100%);
+        padding: 0 12px;
+        
+    }
+}
+

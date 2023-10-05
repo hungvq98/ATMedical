@@ -4,25 +4,6 @@
     font-style: normal;
 }
 
-h4 {
-    @include textStyle();
-    padding-bottom: 1rem;
-    text-align: center;
-    font-size: 48px;
-
-    background: var(--linear-1, linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2 {
-    @include textStyle();
-    color: #FFF;
-    text-align: center;
-    font-size: 48px;
-}
-
 .red {
     color: red;
 }
@@ -31,15 +12,28 @@ h2 {
     font-weight: 700;
 }
 
-.container {
-    max-width: 1200px;
-    padding: 0 16px;
-    margin: 0 auto;
-}
-
 .lienhe {
     background-color: #052143;
     padding-bottom: 120px;
+
+    h4 {
+        @include textStyle();
+        padding-bottom: 1rem;
+        text-align: center;
+        font-size: 48px;
+
+        background: var(--linear-1, linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        @include textStyle();
+        color: #FFF;
+        text-align: center;
+        font-size: 48px;
+    }
 
     &-content {
         display: flex;
@@ -78,7 +72,7 @@ h2 {
                     &:nth-child(5) {
                         width: 100%;
                         padding-bottom: 60px;
-                    }
+                    }   
                 }
 
                 &-text {}
@@ -88,12 +82,14 @@ h2 {
                     outline: none;
                     border: none;
                     border-bottom: 1px #DADADA solid;
-
+                    letter-spacing: 0.4px;
+                    
                     &:focus {
                         outline: none;
                         border-width: 1px;
                         border-image: linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
                         border-image-slice: 1;
+                        letter-spacing: 0.4px;
 
                     }
                 }
@@ -122,13 +118,17 @@ h2 {
                     text-align: center;
                     padding: 16px;
                     margin: 0 auto;
+                    color: #052143;
 
-                    &-text {
-                        @include textStyle();
-                        color: #052143;
-                        font-weight: 700;
+
+                    &:hover {
+                        color: #FFBE4D;
+                        background: var(--Gradient-2, linear-gradient(315deg, #052449 -7.5%, #509AF2 222.87%));
+                        border: 1px solid #052143;
                     }
+
                 }
+
             }
         }
     }
@@ -148,14 +148,7 @@ h2 {
     line-height: 26px;
 }
 
-.email {
-    @include textStyle();
-    color: #00A3FF;
-    font-family: Inter;
-    font-size: 16px;
-    letter-spacing: 0.128px;
-    text-decoration-line: underline;
-}
+
 
 .truso {
     @include textStyle();
@@ -179,13 +172,28 @@ h2 {
         padding-top: 62px;
         padding-bottom: 32px;
     }
+
+    a:hover {
+        color: #00A3FF;
+    }
+}
+
+.email {
+    @include textStyle();
+    color: #00A3FF;
+    font-family: Inter;
+    font-size: 16px;
+    letter-spacing: 0.128px;
+    text-decoration-line: underline;
+    &:hover {
+        color: #fff !important;
+    }
 }
 
 .xembando {
     padding-top: 10px;
     display: flex;
     gap: 9px;
-    text-decoration: underline;
 
     &-img {
         width: 25.12px;
@@ -198,6 +206,7 @@ h2 {
     }
 
     &-text {
+        position: relative;
         @include textStyle();
         font-size: 16px;
         line-height: 28.8px;
@@ -206,6 +215,24 @@ h2 {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        
+        &:hover {
+            background: #00A3FF;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    
+    &-underline {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 4px;
+        z-index: 1;
+
+        background-image: linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
     }
 }
 
@@ -218,7 +245,7 @@ h2 {
             width: 100%;
             padding: unset;
         }
-        
+
         &-right {
             width: 100%;
             padding: unset;

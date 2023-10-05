@@ -15085,7 +15085,19 @@ table .status.cancle {
   padding: 1rem 0 2rem 0;
 }
 
-h4 {
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.lienhe {
+  background-color: #052143;
+  padding-bottom: 120px;
+}
+.lienhe h4 {
   color: #FFF;
   font-family: Noto Sans;
   font-style: normal;
@@ -15097,33 +15109,13 @@ h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-h2 {
+.lienhe h2 {
   color: #FFF;
   font-family: Noto Sans;
   font-style: normal;
   color: #FFF;
   text-align: center;
   font-size: 48px;
-}
-
-.red {
-  color: red;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.container {
-  max-width: 1200px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
-.lienhe {
-  background-color: #052143;
-  padding-bottom: 120px;
 }
 .lienhe-content {
   display: flex;
@@ -15169,12 +15161,14 @@ h2 {
   outline: none;
   border: none;
   border-bottom: 1px #DADADA solid;
+  letter-spacing: 0.4px;
 }
 .lienhe-content-right .form-lienhe input:focus {
   outline: none;
   border-width: 1px;
   border-image: linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
   border-image-slice: 1;
+  letter-spacing: 0.4px;
 }
 .lienhe-content-right .form-lienhe textarea {
   width: 100%;
@@ -15197,13 +15191,12 @@ h2 {
   text-align: center;
   padding: 16px;
   margin: 0 auto;
-}
-.lienhe-content-right .form-lienhe .guithongtin-btn-text {
-  color: #FFF;
-  font-family: Noto Sans;
-  font-style: normal;
   color: #052143;
-  font-weight: 700;
+}
+.lienhe-content-right .form-lienhe .guithongtin-btn:hover {
+  color: #FFBE4D;
+  background: var(--Gradient-2, linear-gradient(315deg, #052449 -7.5%, #509AF2 222.87%));
+  border: 1px solid #052143;
 }
 .lienhe-title {
   width: 1036px;
@@ -15215,17 +15208,6 @@ h2 {
 .company-text {
   font-size: 24px;
   line-height: 26px;
-}
-
-.email {
-  color: #FFF;
-  font-family: Noto Sans;
-  font-style: normal;
-  color: #00A3FF;
-  font-family: Inter;
-  font-size: 16px;
-  letter-spacing: 0.128px;
-  text-decoration-line: underline;
 }
 
 .truso {
@@ -15250,12 +15232,28 @@ h2 {
   padding-top: 62px;
   padding-bottom: 32px;
 }
+.truso a:hover {
+  color: #00A3FF;
+}
+
+.email {
+  color: #FFF;
+  font-family: Noto Sans;
+  font-style: normal;
+  color: #00A3FF;
+  font-family: Inter;
+  font-size: 16px;
+  letter-spacing: 0.128px;
+  text-decoration-line: underline;
+}
+.email:hover {
+  color: #fff !important;
+}
 
 .xembando {
   padding-top: 10px;
   display: flex;
   gap: 9px;
-  text-decoration: underline;
 }
 .xembando-img {
   width: 25.12px;
@@ -15266,6 +15264,7 @@ h2 {
   height: 100%;
 }
 .xembando-text {
+  position: relative;
   color: #FFF;
   font-family: Noto Sans;
   font-style: normal;
@@ -15275,6 +15274,21 @@ h2 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.xembando-text:hover {
+  background: #00A3FF;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.xembando-underline {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 4px;
+  z-index: 1;
+  background-image: linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
 }
 
 @media screen and (max-width: 841px) {
@@ -15307,9 +15321,9 @@ h2 {
 .chitiet-baiviet {
   background-color: #062347;
   width: 100%;
-  margin: -20px;
   text-align: left;
   font-family: Noto Sans;
+  padding-bottom: 120px;
 }
 .chitiet-baiviet h2 {
   text-align: left;
@@ -15323,6 +15337,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 .chitiet-baiviet h4 {
+  padding-bottom: 15px;
   text-align: left;
   font-size: 20px;
   font-style: normal;
@@ -15334,7 +15349,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 .chitiet-baiviet p {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   color: #CCC;
   font-size: 16px;
   font-style: normal;
@@ -15347,10 +15362,17 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.chitiet-baiviet-inner {
+  width: 100%;
+  display: flex;
+  align-items: unset;
+  justify-content: center;
+  margin: 0 -20px;
+}
 .chitiet-baiviet-left {
-  width: 792px;
+  width: 66.6666666667%;
   max-width: 100%;
-  padding: 20px;
+  padding: 0 20px;
 }
 .chitiet-baiviet-left-content {
   width: 100%;
@@ -15366,7 +15388,8 @@ h2 {
   font-weight: 400;
   line-height: 14px;
   display: flex;
-  align-items: center;
+  align-items: unset;
+  justify-content: unset;
   gap: 12px;
 }
 .chitiet-baiviet-left .author-dot {
@@ -15384,20 +15407,540 @@ h2 {
   width: 100%;
   object-fit: cover;
 }
-.chitiet-baiviet-left-share {
+.chitiet-baiviet-right {
+  width: 33.3333333333%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+.chitiet-baiviet-right .cohoinghenghiep {
+  padding-bottom: 41px;
+  width: 100%;
+}
+.chitiet-baiviet-right .cohoinghenghiep-heading {
+  color: #5579A4;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.2px;
+  text-transform: uppercase;
+}
+.chitiet-baiviet-right .cohoinghenghiep-post {
+  position: relative;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: unset;
+  justify-content: unset;
+  gap: 20px;
+}
+.chitiet-baiviet-right .cohoinghenghiep-post a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.chitiet-baiviet-right .cohoinghenghiep-post:hover {
+  background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.chitiet-baiviet-right .cohoinghenghiep-img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.chitiet-baiviet-right .cohoinghenghiep-img img {
+  max-width: 110px;
+  object-fit: cover;
+}
+.chitiet-baiviet-right .cohoinghenghiep-title {
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.chitiet-baiviet-right .form-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chitiet-baiviet-right .form-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.chitiet-baiviet-right .form-banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.chitiet-baiviet-right .form-lienhe {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 152px 32px 73px 32px;
+  padding: 19px 20px;
+  color: #FFF;
+  font-family: Noto Sans;
+  font-style: normal;
+  width: 100%;
+  color: #052143;
+  font-weight: 700;
+  border-radius: 10px;
+  background: #FFF;
+  justify-content: center;
+}
+.chitiet-baiviet-right .form-lienhe-element {
+  padding-bottom: 39px;
+  width: 100%;
+}
+.chitiet-baiviet-right .form-lienhe input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px #DADADA solid;
+  letter-spacing: 0.4px;
+}
+.chitiet-baiviet-right .form-lienhe input:focus {
+  outline: none;
+  border-width: 1px;
+  border-image: linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+  border-image-slice: 1;
+  letter-spacing: 0.4px;
+}
+.chitiet-baiviet-right .form-lienhe textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px #DADADA solid;
+  letter-spacing: 0.4px;
+}
+.chitiet-baiviet-right .form-lienhe textarea:focus {
+  outline: none;
+  border-width: 1px;
+  border-image: linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+  border-image-slice: 1;
+  letter-spacing: 0.4px;
+}
+.chitiet-baiviet-right .form-lienhe .guithongtin-btn {
+  width: 100%;
+  outline: none;
+  border-radius: 100px;
+  border: 1px solid #B66F29;
+  background: linear-gradient(113deg, #FFCA43 -39%, #FFBE4D 260.71%);
+  text-align: center;
+  padding: 11px 39px;
+  margin: 0 auto;
+}
+.chitiet-baiviet-right .form-lienhe .guithongtin-btn-text {
+  color: #FFF;
+  font-family: Noto Sans;
+  font-style: normal;
+  color: #052143;
+  font-weight: 700;
+}
+.chitiet-baiviet-right .form-lienhe .guithongtin-btn:hover {
+  color: #FFBE4D;
+  background: var(--Gradient-2, linear-gradient(315deg, #052449 -7.5%, #509AF2 222.87%));
+  border: 1px solid #052143;
+}
+
+.share-social {
+  padding-top: 30px;
+  padding-bottom: 20px;
   width: 100%;
   display: flex;
   gap: 16px;
   align-items: center;
 }
-.chitiet-baiviet-left-share .icon-social {
+.share-text {
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+.share-icon-social {
   width: 24px;
   height: 24px;
 }
-.chitiet-baiviet-right {
-  width: 368px;
+
+.x-line {
+  height: 1px;
+  border: 1px #293D55 solid;
+}
+
+.baivietlienquan {
+  padding-top: 40px;
+}
+.baivietlienquan h3 {
+  padding-bottom: 20px;
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+}
+.baivietlienquan-post {
+  position: relative;
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  align-items: unset;
+  justify-content: unset;
+  gap: 16px;
+  cursor: pointer;
+}
+.baivietlienquan-post a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.baivietlienquan-post:hover h4 {
+  background: #FFF;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.baivietlienquan-img {
   max-width: 100%;
-  padding: 20px;
+  border-radius: 5px;
+}
+.baivietlienquan-img img {
+  max-width: 210px;
+  height: 100%;
+  object-fit: cover;
+}
+.baivietlienquan-text h4 {
+  padding-bottom: unset;
+}
+.baivietlienquan-text p {
+  color: #CCC;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+@media screen and (max-width: 1024px) {
+  .chitiet-baiviet-inner {
+    flex-wrap: wrap;
+    margin: unset;
+  }
+  .chitiet-baiviet-left {
+    width: 100%;
+    padding: unset;
+  }
+  .chitiet-baiviet-right {
+    width: 100%;
+    padding: unset;
+    padding-top: 20px;
+  }
+  .form-banner-bg {
+    display: none;
+  }
+  .chitiet-baiviet-right .form-lienhe {
+    margin: unset;
+  }
+}
+h3 {
+  padding-bottom: 2rem;
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.9rem;
+}
+
+.tintuc {
+  background-color: #052143;
+}
+.tintuc h2 {
+  text-align: left;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tintuc h4 {
+  padding-bottom: 1.5rem;
+  text-align: left;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.6rem;
+  background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tintuc p {
+  margin-bottom: 1.8rem;
+  color: #CCC;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tintuc .tintucnoibat {
+  padding-bottom: 6rem;
+}
+.tintuc .tintucnoibat-inner {
+  margin: 0 -1.2rem;
+  display: flex;
+  align-items: unset;
+  justify-content: unset;
+}
+.tintuc .tintucnoibat .author {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  color: #CCC;
+  font-family: Noto Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 12px;
+}
+.tintuc .tintucnoibat .author-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+.tintuc .tintucnoibat-left {
+  width: 50%;
+  max-width: 100%;
+  padding: 0 12px;
+}
+.tintuc .tintucnoibat-left-content {
+  width: 100%;
+}
+.tintuc .tintucnoibat-left-img {
+  width: 100%;
+  border-radius: 5px;
+  padding-bottom: 2rem;
+}
+.tintuc .tintucnoibat-left-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.tintuc .tintucnoibat-right {
+  width: 50%;
+  padding: 0 1.2rem;
+}
+.tintuc .tintucnoibat-right-post {
+  position: relative;
+  padding-bottom: 2.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+.tintuc .tintucnoibat-right-post a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tintuc .tintucnoibat-right-img {
+  max-width: 100%;
+  min-height: 12.6rem;
+  border-radius: 5px;
+}
+.tintuc .tintucnoibat-right-img img {
+  max-width: 19rem;
+  height: 100%;
+  object-fit: cover;
+}
+.tintuc .tintucnoibat-right-text h4 {
+  padding-bottom: unset;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tintuc .tintucnoibat-right-text .author {
+  padding: 1.2rem 0 1.5rem 0;
+}
+.tintuc .tintucnoibat-right-text p {
+  color: #CCC;
+  font-family: Noto Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.1rem;
+}
+.tintuc .baivietlienquan {
+  padding-top: unset;
+}
+.tintuc .baivietlienquan-img {
+  min-height: 14rem;
+}
+.tintuc .baivietlienquan-text h4 {
+  padding-bottom: unset;
+  line-height: 3rem;
+}
+.tintuc .baivietlienquan .author {
+  padding: 1.2rem 0;
+}
+.tintuc .baivietlienquan-preview {
+  line-height: 2.1rem;
+  padding-bottom: unset;
+}
+.tintuc .docthem-btn {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 0.8rem;
+}
+.tintuc .docthem-btn span {
+  color: #0068FF;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4rem;
+}
+.tintuc .docthem-btn img {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .tintucnoibat-left {
+    padding: 0 1.6rem;
+  }
+  .tintucnoibat-right {
+    padding: 0 1.6rem;
+  }
+}
+@media screen and (max-width: 834px) {
+  .tintuc .tintucnoibat-right-text .author {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 810px) {
+  .tintucnoibat {
+    padding-bottom: 2rem !important;
+  }
+  .tintucnoibat-inner {
+    flex-direction: column;
+  }
+  .tintucnoibat-left {
+    width: 100% !important;
+    padding: unset;
+  }
+  .tintucnoibat-left-img {
+    padding-bottom: 0;
+  }
+  .tintucnoibat-right {
+    width: 100% !important;
+    padding: unset;
+    padding-top: 4rem !important;
+  }
+}
+@media screen and (max-width: 434px) {
+  .author {
+    flex-direction: column;
+  }
+  .author-dot {
+    display: none;
+  }
+}
+.chitietcongviec-text {
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.2px;
+  text-transform: uppercase;
+  background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chitiet-tuyendung {
+  width: 100%;
+  background-color: #031831;
+}
+.chitiet-tuyendung-title {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 16px;
+  padding-bottom: 30px;
+}
+.chitiet-tuyendung .tag-name {
+  padding: 4px 16px;
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 100px;
+  border: 1px solid #1E77DF;
+  backdrop-filter: blur(5px);
+}
+.chitiet-tuyendung h3 {
+  padding-bottom: unset;
+}
+.chitiet-tuyendung-inner {
+  display: flex;
+  align-items: unset;
+  justify-content: unset;
+  margin: 0 -12px;
+}
+.chitiet-tuyendung-left {
+  width: 56.25%;
+  padding: 0 12px;
+}
+.chitiet-tuyendung-right {
+  width: 18.75%;
+  padding: 0 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
