@@ -22,16 +22,23 @@ export default function InputModule() {
                             input.closest('.form-ip').classList.remove('active')
                         }
                     })
+                    input.addEventListener('focus', () => {
+                        input.closest('.form-ip').classList.add('focus')
+                    })
                     input.addEventListener('blur', () => {
+                        input.closest('.form-ip').classList.remove('focus')
                         if (input.value == '') {
                             input.closest('.form-ip').classList.remove('active')
                         }
                     })
+
                 }
                 if (textarea) {
                     const text = items.querySelector('.text-abs')
-
-                    text.classList.add('field')
+                    console.log('alo')
+                    if (text) {
+                        text.classList.add('field')
+                    }
                     if (textarea.value != '') {
                         textarea.closest('.form-ip').classList.add('active')
                     } else {
@@ -44,7 +51,11 @@ export default function InputModule() {
                             textarea.closest('.form-ip').classList.remove('active')
                         }
                     })
+                    textarea.addEventListener('focus', () => {
+                        textarea.closest('.form-ip').classList.add('focus')
+                    })
                     textarea.addEventListener('blur', () => {
+                        textarea.closest('.form-ip').classList.remove('focus')
                         if (textarea.value == '') {
                             textarea.closest('.form-ip').classList.remove('active')
                         }
@@ -72,19 +83,34 @@ export default function InputModule() {
 
     const star = document.querySelectorAll('.rating .stars');
 
-    if(star) {
+    if (star) {
         star.forEach((item, index) => {
             item.addEventListener('click', () => {
-    
+
                 star.forEach((item2, i) => {
                     if (i <= index) {
                         item2.classList.add('active')
                     } else {
                         item2.classList.remove('active')
-    
+
                     }
                 })
             })
         })
     }
+
+    const book = document.querySelector('.book')
+    const cursor = document.querySelector(".cs");
+    if (book) {
+        
+        book.addEventListener("mousemove", (e) => {
+            cursor.classList.add('inside')
+            cursor.style.left = e.pageX + "px";
+            cursor.style.top = e.pageY + "px";
+        });
+        book.addEventListener("mouseout", (e) => {
+            cursor.classList.remove('inside')
+        });
+    }
+
 }

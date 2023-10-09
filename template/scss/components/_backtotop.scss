@@ -40,9 +40,9 @@
         }
         .logo {
             position: absolute;
-            width: 10rem;
-            height: 10rem;
-            background: url("../assets/images/ic-totop.svg");
+            width: 3.2rem;
+            height: 3.2rem;
+            background: url("../assets/images/downward-arrow.svg");
             background-size: cover;
             border-radius: 100vmax;
             background-position: center;
@@ -60,6 +60,7 @@
             font-size: 1.3rem;
             animation: textRotation 8s linear infinite;
             @include font-second;
+            
         }
 
         .circle-txt span {
@@ -68,7 +69,9 @@
             font-size: 1.2em;
             transform-origin: 0 9rem;
             text-transform: uppercase;
-
+            background: $linear;
+            @include txt-ln;
+            font-weight: 700;
             @include max(1200px) {
                 transform-origin: 0 4rem;
                 font-size: 0.9rem;

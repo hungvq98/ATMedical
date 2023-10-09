@@ -15,14 +15,13 @@
             border-radius: 100rem;
             @include mid-flex;
             background-color: transparent;
-            border: 0.1rem solid $color-border-01;
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            color: $color-text;
+            color: $color-white;
             font-size: 1.6rem;
             transition: 0.4s;
-            @include affter($color-pri);
+            @include affter($linear);
             &:after {
                 z-index: -1;
             }
@@ -39,13 +38,16 @@
                         width: 100%;
                     }
                 }
+                img {
+                    filter: brightness(0) invert(1);
+                }
             }
             &.current {
-                color: $color-white;
+                color: $color-second;
                 font-weight: 400;
                 &::after {
                     left: 0;
-                    width: 100%;
+                    // width: 100%;
                 }
             }
             &.dot {
@@ -53,9 +55,17 @@
             }
             &.next {
                 color: $color-pri;
+                border: 0.1rem solid $color-second;
+                img {
+                    transform: translateX(-0.1rem);
+                }
             }
             &.prev {
                 color: $color-pri;
+                border: 0.1rem solid $color-second;
+                img {
+                    transform: translateX(0.1rem);
+                }
             }
             i {
                 font-weight: 400;
