@@ -1,5 +1,5 @@
 :root {
-    --size-hd: 21.7rem;
+    --size-hd: 12rem;
     // distance section
     --pd-sc: 8rem;
 
@@ -23,9 +23,9 @@
     }
 }
 
-$color-pri-ln: #242424;
-$color-pri: #00BFFE;
-$color-second: #D9F6FF;
+$color-pri-ln: #0C1226;
+$color-pri: #0C1226;
+$color-second: #EDB31F;
 $color-third: #EC1C24;
 $color-four: #111927;
 $color-five: #f05123;
@@ -64,7 +64,9 @@ $shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 // header shadow
 $shadowhd: 0px 4px 30px 0px rgba(1, 0, 35, 0.15);
 // linear 
-$linear:linear-gradient(180deg, #FFF -96.58%, #B0EBFF 100%);
+$linear:linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+$linearBlue: linear-gradient(357deg, #011224 0%, #062347 85.55%, #0C3A76 141.16%);
+$linearText:linear-gradient(90deg, #B66F29 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
 // ellipse 
 // $ellipse: ellipse(49% 35% at 50% 50%);
 $ellipse:ellipse(49% 50% at 50% 50%);

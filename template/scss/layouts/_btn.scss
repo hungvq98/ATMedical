@@ -4,13 +4,12 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
     flex-shrink: 0;
-    // border-radius: 1.2rem;
-    height: 4.8rem;
+    border-radius: 100rem;
+    height: 4rem;
     width: fit-content;
     overflow: hidden;
-    clip-path: $ellipse;
     min-width: 15rem;
     img {
         position: relative;
@@ -48,14 +47,13 @@
     }
     .txt {
         color: $color-white;
-        line-height: 1;
         z-index: 3;
         @include fz-16;
         position: relative;
         display: block !important;
         white-space: nowrap;
         transition: 0.4s;
-        text-transform: uppercase;
+        font-weight: 700;
     }
 
     &::after {
@@ -82,22 +80,20 @@
 
     &-pri {
         @extend .btn;
-        background: $color-pri;
-
+        background: $linear;
+        border: 0.1rem solid $color-pri;
         &::after {
-            background: $linear;
+            background: $color-second;
         }
 
         .txt {
-            color: $color-white;
+            background:linear-gradient(315deg, #052449 -7.5%, #509AF2 222.87%);
+            @include txt-ln;
         }
 
         .icon {
             i {
                 color: $color-white;
-            }
-            img {
-                filter: brightness(0) invert(1);
             }
         }
 
@@ -110,27 +106,20 @@
                 i {
                     color: $color-pri
                 }
-                img {
-                    filter:$filter;
-                }
             }
         }
     }
-    &-bdg {
+    &-bd {
         @extend .btn;
-        background: $color-black;
-        .btn-inner {
-            clip-path: inherit;
-            @include full(0.1rem,0.1rem,0.1rem,0.1rem);
-            position: absolute;
-            background-color: $color-white;
-        }
+        background:transparent;
+
         &::after {
-            background: $color-text;
+            background: linear-gradient(90deg, rgba(182, 111, 41, 0.10) 0.37%, rgba(220, 154, 39, 0.10) 27.52%, rgba(237, 179, 31, 0.10) 52.76%, rgba(215, 148, 42, 0.10) 80.98%, rgba(176, 104, 40, 0.10) 100%);
         }
 
         .txt {
-            color: $color-text;
+            background:$linear;
+            @include txt-ln;
         }
 
         .icon {
@@ -141,59 +130,12 @@
 
         @include hover {
             .txt {
-                color: $color-white;
+                color: $color-pri;
             }
 
             .icon {
                 i {
                     color: $color-pri
-                }
-                img {
-                    filter: brightness(0) invert(1);
-                }
-            }
-        }
-    }
-    &-bdb {
-        @extend .btn;
-        background: $color-pri;
-        .btn-inner {
-            clip-path: inherit;
-            @include full(0.1rem,0.1rem,0.1rem,0.1rem);
-            position: absolute;
-            background-color: $color-white;
-        }
-        &::after {
-            background: $color-text;
-        }
-
-        .text {
-            color: $color-white;
-            position: relative;
-            z-index: 3;
-            text-transform: uppercase;
-        }
-
-        .icon {
-            i {
-                color: $color-white;
-            }
-            img {
-                filter: brightness(1) invert(1);
-            }
-        }
-
-        @include hover {
-            .text {
-                color: $color-white;
-            }
-
-            .icon {
-                i {
-                    color: $color-pri
-                }
-                img {
-                    filter: brightness(0) invert(1);
                 }
             }
         }
@@ -241,13 +183,14 @@
     width: fit-content;
     display: grid;
     place-items: center;
-    padding: 0.1rem;
+    padding: 0.2rem;
     &::before {
         content: "";
         position: absolute;
         @include full(0,0,0,0);
-        padding: 0.1rem;
+        padding: 0.2rem;
         background: $linear;
+        border-radius: 100rem;
         -webkit-mask:
             linear-gradient(#fff 0 0) content-box,
             linear-gradient(#fff 0 0);

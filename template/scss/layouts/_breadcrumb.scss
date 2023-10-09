@@ -4,7 +4,7 @@
     z-index: 2;
 }
 .breadcrumb {
-    padding: 1.2rem 0;
+    padding: 3rem 0;
     &-list {
         @include flex;
         align-items: center;
@@ -14,35 +14,36 @@
     }
 
     &-item {
-        color: $color-text;
+        color: $color-white;
         font-size: 1.6rem;
         display: flex;
         align-items: center;
         gap: 1.6rem;
         &:not(:first-child) {
             &::before {
-                content: '';
-                width: 0.6rem;
-                height: 0.6rem;
+                content: '\f054';
+                font-family: "Font Awesome 6 Pro";
+                width: 1.6rem;
+                height: 1.6rem;
                 border-radius: 100rem;
                 @include mid-flex;
                 font-weight: 400;
                 flex-shrink: 0;
-                background: $color-text;
+                color: #969696;
             }
         }
 
         &:last-child {
-            color: $color-pri;
+            color: $color-white;
             pointer-events: none;
-            font-weight: 600;
+            font-weight: 400;
             &::before {
                 filter:  none;
             }
         }
 
         @include hover {
-            color: $color-pri;
+            color: $color-second;
         }
     }
 

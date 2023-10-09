@@ -5,26 +5,29 @@
     width: 100%;
     transition: 0.4s;
     z-index: 50;
-    // height: var(--size-hd);
-    border-bottom: 0.1rem solid #ebebeb37;
-    // background-color: $color-second;
+    height: var(--size-hd);
     background-color: transparent;
+    &::after {
+        @include pseudo;
+        bottom: 0;
+        left: 0;
+        height: 0.1rem;
+        width: 100%;
+        background: $linear;
+    }
 
     @include max(1200px) {
         height: 6rem;
-        background-color: $color-white;
+        background: $linearBlue;
     }
 
     &.sticky {
-        background-color: $color-white;
         @include min(1201px) {
-            --size-hd:14.2rem;
-            .header-top {
-                height: 8rem;
-                .header-logo {
-                    .custom-logo-link {
-                        width: 10rem;
-                    }
+            --size-hd:8rem;
+            background-color: $color-pri;
+            .header-logo {
+                .custom-logo-link {
+                    width: 8rem;
                 }
             }
         }
@@ -32,31 +35,16 @@
 
     &-wrap {
         max-width: 100%;
-        width: calc(10/12*100%);
+        width: 140rem;
         transition: 0.4s;
         height: 100%;
         margin: auto;
         position: relative;
+        padding: 0 1.5rem;
 
         @include max(1200px) {
             width: 100%;
         }
-    }
-
-    &-top {
-        height: 15.5rem;
-        border-bottom: 0.1rem solid #ebebeb37;
-        transition: 0.4s;
-        @include max(1200px) {
-            height: 6rem;
-        }
-    }
-
-    &-bot {
-        height: 6.2rem;
-        @include flex;
-        align-items: center;
-        transition: 0.4s;
     }
 
     &-flex {
@@ -83,23 +71,19 @@
 
         .menu-nav {
             .menu-list {
-                justify-content: space-between;
+                // justify-content: space-between;
             }
         }
     }
 
     &-logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-
         .custom-logo-link {
             display: flex;
             @include transitionRe;
-            width: 23rem;
+            width: 11.3rem;
 
             @include max(1200px) {
-                width: 10rem;
+                width: 7rem;
             }
             @include max(400px) {
                 width: 7rem;
@@ -126,26 +110,28 @@
     }
 
     &-it {
-        width: 4.4rem;
-        height: 4.4rem;
+        width: 4.2rem;
+        height: 4.2rem;
         border: 0.1rem solid $color-border-01;
         @include mid-flex;
         border-radius: 100rem;
         cursor: pointer;
         transition: 0.4s;
+        flex-shrink: 0;
+        border: 0.1rem solid $color-second;
         
         @include hover {
-            border-color: $color-pri;
-
-            img {
-                filter: $filter;
-            }
+            background: $color-opa-white-01;
+           img {
+                transform: scale(1.1);
+           }
         }
 
         img {
             width: 2rem;
             height: 2rem;
-            border-radius: 0
+            border-radius: 0;
+            transition: 0.4s;
         }
         @include max(1200px){
             width: 3rem;
@@ -157,11 +143,49 @@
         }
     }
 
-    &-srch {}
-
-    &-usr {}
-
-    &-hrt {}
+    &-ph {
+        @include flex;
+        align-items: center;
+        .ic {
+            width: 4.2rem;
+            height: 4.2rem;
+            @include mid-flex;
+            @include max(1200px) {
+                width: 3rem;
+                height: 3rem;
+            }
+            @include max(390px) {
+                margin-right: 0 !important;
+            }
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+        .txt {
+           
+            .name {
+                font-weight: 300;
+                @include max(1200px) {
+                    display: none;
+                }
+            }
+            .val {
+                @include fz-24;
+                font-weight: 700;
+                background: $linear;
+                @include txt-ln;
+                @include max(390px) {
+                    display: none;
+                }
+            }
+        }
+        @include hover {
+            .ic {
+                animation: phoneRing 1s linear infinite
+            }
+        }
+    }
 
     &-cart {
         
@@ -509,15 +533,8 @@
     .burger {
         width: 3rem;
         height: 3rem;
-        background-color: $color-pri;
-        margin-left: 2rem;
+        background:$linear;
         border-radius: 100rem;
-        @include max(600px) {
-            margin-left: 1rem;
-        }
-        @include max(400px) {
-            margin-left: 0.5rem;
-        }
         @include min($res-mobile-min) {
             display: none;
         }

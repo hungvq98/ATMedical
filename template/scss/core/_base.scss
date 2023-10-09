@@ -1,6 +1,7 @@
 @import url("../assets/font/Themify/stylesheet.css");
 @import url("../assets/font/NotoSans/stylesheet.css");
 @import url("../assets/font/SVN-Saudagar/stylesheet.css");
+@import url("../assets/font/SignRathi/stylesheet.css");
 
 * {
     box-sizing: border-box;
@@ -58,6 +59,7 @@ textarea {
 .main {
     min-height: 68vh;
     padding-top: var(--size-hd);
+    background: $linearBlue;
     &.noback {
         background: $color-white;
         position: relative;
