@@ -10,14 +10,14 @@
     width: 100%;
     text-align: left;
     font-family: Noto Sans;
-    padding-bottom: 120px;
+    padding-bottom: 12rem;
 
     h2 {
         text-align: left;
-        font-size: 24px;
+        font-size: 2.4rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 36px;
+        line-height: 3.6rem;
 
         background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
         background-clip: text;
@@ -26,12 +26,12 @@
     }
 
     h4 {
-        padding-bottom: 15px;
+        padding-bottom: 1.5rem;
         text-align: left;
-        font-size: 20px;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 26px;
+        line-height: 2.6rem;
 
         background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
         background-clip: text;
@@ -40,12 +40,12 @@
     }
 
     p {
-        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
         color: #CCC;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 400;
-        line-height: 26px;
+        line-height: 2.6rem;
 
         .text-highlight {
             background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
@@ -58,34 +58,34 @@
     &-inner {
         width: 100%;
         @include flex(unset, center);
-        margin: 0 -20px;
+        margin: 0 -2rem;
     }
 
     &-left {
         width: calc((8 / 12) * 100%);
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 2rem;
 
         &-content {
             width: 100%;
         }
 
         .author {
-            padding-top: 15px;
-            padding-bottom: 24px;
+            padding-top: 1.5rem;
+            padding-bottom: 2.4rem;
             width: 100%;
             color: #CCC;
             font-family: Noto Sans;
-            font-size: 14px;
+            font-size: 1.4rem;
             font-style: normal;
             font-weight: 400;
-            line-height: 14px;
+            line-height: 1.4rem;
             @include flex;
-            gap: 12px;
+            gap: 1.2rem;
 
             &-dot {
-                width: 5px;
-                height: 5px;
+                width: 0.5rem;
+                height: 0.5rem;
                 border-radius: 50%;
                 background-color: #C4C4C4;
             }
@@ -93,8 +93,8 @@
 
         &-img {
             width: 100%;
-            border-radius: 5px;
-            padding-bottom: 30px;
+            border-radius: 0.5rem;
+            padding-bottom: 3rem;
 
             img {
                 width: 100%;
@@ -104,68 +104,9 @@
     }
 
     &-right {
-        // width: 368px;
         width: calc((4 / 12) * 100%);
         max-width: 100%;
-        padding: 0 20px;
-
-        .cohoinghenghiep {
-            padding-bottom: 41px;
-            width: 100%;
-
-            &-heading {
-                color: #5579A4;
-                font-family: Noto Sans;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 18.2px;
-                text-transform: uppercase;
-            }
-
-            &-post {
-                position: relative;
-                padding-top: 20px;
-                width: 100%;
-                @include flex;
-                gap: 20px;
-
-                a {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                &:hover {
-                    background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-
-            &-img {
-                max-width: 100%;
-                border-radius: 5px;
-
-                img {
-                    max-width: 110px;
-                    object-fit: cover;
-                }
-            }
-
-            &-title {
-                color: #FFF;
-                font-family: Noto Sans;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 21px;
-                text-transform: uppercase;
-            }
-        }
+        padding: 0 2rem;
 
         .form-banner {
             position: relative;
@@ -194,22 +135,20 @@
             position: relative;
             @include flex(center, center);
             flex-direction: column;
-            margin: 152px 32px 73px 32px;
-            padding: 19px 20px;
+            margin: 15.2rem 3.2rem 7.3rem 3.2rem;
+            padding: 1.9rem 2rem;
             @include textStyle();
             width: 100%;
             color: #052143;
             font-weight: 700;
-            border-radius: 10px;
+            border-radius: 1rem;
             background: #FFF;
             justify-content: center;
 
             &-element {
-                padding-bottom: 39px;
+                padding-bottom: 3.9rem;
                 width: 100%;
             }
-
-            &-text {}
 
             input {
                 width: 100%;
@@ -247,11 +186,11 @@
             .guithongtin-btn {
                 width: 100%;
                 outline: none;
-                border-radius: 100px;
+                border-radius: 10rem;
                 border: 1px solid #B66F29;
                 background: linear-gradient(113deg, #FFCA43 -39%, #FFBE4D 260.71%);
                 text-align: center;
-                padding: 11px 39px;
+                padding: 1.1rem 3.9rem;
                 margin: 0 auto;
 
                 &-text {
@@ -270,28 +209,86 @@
     }
 }
 
+.cohoinghenghiep {
+    padding-bottom: 4.1rem;
+    width: 100%;
+
+    &-heading {
+        color: #5579A4;
+        font-family: Noto Sans;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18.2px;
+        text-transform: uppercase;
+    }
+
+    &-post {
+        position: relative;
+        padding-top: 2rem;
+        width: 100%;
+        @include flex;
+        gap: 2rem;
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &-img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+
+        img {
+            max-width: 11rem;
+            object-fit: cover;
+        }
+    }
+
+    &-title {
+        color: #FFF;
+        font-family: Noto Sans;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.1rem;
+        text-transform: uppercase;
+    }
+}
+
 .share {
     &-social {
-        padding-top: 30px;
-        padding-bottom: 20px;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
         width: 100%;
         display: flex;
-        gap: 16px;
+        gap: 1.6rem;
         align-items: center;
     }
 
     &-text {
         color: #FFF;
         font-family: Noto Sans;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 400;
-        line-height: 28.8px;
+        line-height: 2.88rem;
     }
 
     &-icon-social {
-        width: 24px;
-        height: 24px;
+        width: 2.4rem;
+        height: 2.4rem;
     }
 }
 
@@ -301,25 +298,25 @@
 }
 
 .baivietlienquan {
-    padding-top: 40px;
+    padding-top: 4rem;
 
     h3 {
-        padding-bottom: 20px;
+        padding-bottom: 2rem;
         color: #FFF;
         font-family: Noto Sans;
-        font-size: 30px;
+        font-size: 3rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 39px;
+        line-height: 3.9rem;
     }
 
 
     &-post {
         position: relative;
-        padding-bottom: 30px;
+        padding-bottom: 3rem;
         width: 100%;
         @include flex();
-        gap: 16px;
+        gap: 1.6rem;
         cursor: pointer;
 
         a {
@@ -341,10 +338,10 @@
 
     &-img {
         max-width: 100%;
-        border-radius: 5px;
+        border-radius: 0.5rem;
 
         img {
-            max-width: 210px;
+            max-width: 21rem;
             height: 100%;
             object-fit: cover;
         }
@@ -358,16 +355,21 @@
         p {
             color: #CCC;
             font-family: Noto Sans;
-            font-size: 14px;
+            font-size: 1.4rem;
             font-style: normal;
             font-weight: 400;
-            line-height: 21px;
+            line-height: 2.1rem;
         }
     }
 
 }
 
 
+@media screen and (max-width: 1132px) {
+    .chitiet-baiviet-right .form-lienhe-element {
+        padding-bottom: 0.4rem;
+    }
+}
 @media screen and (max-width: 1024px) {
     .chitiet-baiviet {
         &-inner {
@@ -383,7 +385,7 @@
         &-right {
             width: 100%;
             padding: unset;
-            padding-top: 20px;
+            padding-top: 2rem;
 
         }
     }
@@ -394,5 +396,9 @@
 
     .chitiet-baiviet-right .form-lienhe {
         margin: unset;
+    }
+
+    .chitiet-baiviet-right .form-lienhe-element {
+        padding-bottom: 3.9rem;
     }
 }

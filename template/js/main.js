@@ -27,8 +27,10 @@ import InputModule from "./module/InputModule.js";
 import ButtonModule from "./module/ButtonModule.js";
 import CopyModule from "./module/CopyModule.js";
 import scrollContent from "./module/ScrollContent.js";
+import OpenClosePopup from "./module/OpenClosePopup.js";
 
 window.addEventListener("DOMContentLoaded", () => {
+    OpenClosePopup();
     // Animation
     TextAniModule();
     AnimatedModule();
@@ -69,5 +71,6 @@ window.addEventListener("DOMContentLoaded", () => {
     CopyModule();
     scrollContent();
     ParallaxModule();
+
 });
 
