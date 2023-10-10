@@ -9,7 +9,6 @@
     width: 100%;
     text-align: left;
     font-family: Noto Sans;
-    padding-bottom: 12rem;
 
     h2 {
         text-align: left;
@@ -93,6 +92,10 @@
                 object-fit: cover;
             }
         }
+
+        .page-numbers {
+            justify-content: start;
+        }
     }
 
     &-right {
@@ -127,7 +130,7 @@
             position: relative;
             @include flex(center, center);
             flex-direction: column;
-            margin: 15.2rem 3.2rem 7.3rem 3.2rem;
+            margin: 11.2rem 3.2rem 3.3rem 3.2rem;
             padding: 1.9rem 2rem;
             @include textStyle();
             width: 100%;
@@ -209,7 +212,6 @@
 }
 
 .cohoinghenghiep {
-    padding-bottom: 4.1rem;
     width: 100%;
 
     &-heading {
@@ -297,8 +299,6 @@
 }
 
 .baivietlienquan {
-    padding-top: 4rem;
-
     h3 {
         padding-bottom: 2rem;
         color: #FFF;
@@ -360,7 +360,6 @@
             line-height: 2.1rem;
         }
     }
-
 }
 
 

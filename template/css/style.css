@@ -15079,7 +15079,6 @@ table .status.cancle {
 }
 
 .chinhsach {
-  padding: 9.6rem 0;
   width: 100%;
 }
 .chinhsach-ctn {
@@ -15128,9 +15127,6 @@ table .status.cancle {
 }
 
 @media screen and (max-width: 600px) {
-  .chinhsach {
-    padding: 4.6rem 0;
-  }
   .chinhsach-left {
     max-width: 100%;
   }
@@ -15146,9 +15142,6 @@ table .status.cancle {
   font-weight: 700;
 }
 
-.lienhe {
-  padding-bottom: 12rem;
-}
 .lienhe h4 {
   color: #FFF;
   font-family: Noto Sans;
@@ -15376,11 +15369,24 @@ table .status.cancle {
     font-size: 3.2rem;
   }
 }
+@media screen and (max-width: 800px) {
+  .lienhe h2 {
+    font-size: 2.8rem;
+  }
+  .lienhe h4 {
+    font-size: 2.8rem;
+  }
+  .lienhe-title {
+    padding-bottom: 3rem;
+  }
+  .truso:last-child {
+    padding-top: 3.2rem;
+  }
+}
 .chitiet-baiviet {
   width: 100%;
   text-align: left;
   font-family: Noto Sans;
-  padding-bottom: 12rem;
 }
 .chitiet-baiviet h2 {
   text-align: left;
@@ -15458,6 +15464,9 @@ table .status.cancle {
   width: 100%;
   object-fit: cover;
 }
+.chitiet-baiviet-left .page-numbers {
+  justify-content: start;
+}
 .chitiet-baiviet-right {
   width: 33.3333333333%;
   max-width: 100%;
@@ -15490,7 +15499,7 @@ table .status.cancle {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 15.2rem 3.2rem 7.3rem 3.2rem;
+  margin: 11.2rem 3.2rem 3.3rem 3.2rem;
   padding: 1.9rem 2rem;
   color: #FFF;
   font-family: Noto Sans;
@@ -15565,7 +15574,6 @@ table .status.cancle {
 }
 
 .cohoinghenghiep {
-  padding-bottom: 4.1rem;
   width: 100%;
 }
 .cohoinghenghiep-heading {
@@ -15643,9 +15651,6 @@ table .status.cancle {
   border: 1px #293D55 solid;
 }
 
-.baivietlienquan {
-  padding-top: 4rem;
-}
 .baivietlienquan h3 {
   padding-bottom: 2rem;
   color: #FFF;
@@ -16091,9 +16096,7 @@ h3 {
 
 .chitiet-tuyendung {
   position: relative;
-  padding-bottom: 12.3rem;
   width: 100%;
-  background-color: #031831;
 }
 .chitiet-tuyendung-title {
   display: flex;
@@ -16352,9 +16355,8 @@ h3 {
     padding-bottom: unset;
   }
 }
-.sc-pd {
-  padding: 0;
-  padding-bottom: 4rem;
+#closepopup {
+  cursor: pointer;
 }
 
 .search_select {
@@ -16426,7 +16428,6 @@ h3 {
   align-items: center;
   justify-content: space-between;
   margin: -1.2rem;
-  padding-bottom: 5rem;
 }
 .tuyendung-text {
   padding: 1.2rem;
@@ -16444,6 +16445,7 @@ h3 {
 .tuyendung-img {
   padding: 1.2rem;
   width: 100%;
+  height: 28rem;
   border-radius: 1rem;
 }
 .tuyendung-img img {

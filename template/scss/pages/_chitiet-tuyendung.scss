@@ -147,9 +147,7 @@
 
 .chitiet-tuyendung {
     position: relative;
-    padding-bottom: 12.3rem;
     width: 100%;
-    background-color: #031831;
 
     &-title {
         @include flex(center, unset);
@@ -464,4 +462,8 @@
             }
         }
     }
+}
+
+#closepopup {
+    cursor: pointer;
 }
