@@ -15480,35 +15480,44 @@ table .status.cancle {
   .homes-why-bd {
     align-items: unset;
   }
-  .homes-why-bd .col-5, .homes-why-bd .col-7 {
+  .homes-why-bd .col-5,
+.homes-why-bd .col-7 {
     width: 50%;
   }
-  .homes-why-bd .col-5 .homes-why-left, .homes-why-bd .col-7 .homes-why-left {
+  .homes-why-bd .col-5 .homes-why-left,
+.homes-why-bd .col-7 .homes-why-left {
     height: 100%;
     padding-left: 1.5rem;
   }
-  .homes-why-bd .col-5 .homes-why-left .swiper-container, .homes-why-bd .col-7 .homes-why-left .swiper-container {
+  .homes-why-bd .col-5 .homes-why-left .swiper-container,
+.homes-why-bd .col-7 .homes-why-left .swiper-container {
     height: 100%;
   }
-  .homes-why-bd .col-5 .homes-why-left .swiper-container .swiper, .homes-why-bd .col-7 .homes-why-left .swiper-container .swiper {
+  .homes-why-bd .col-5 .homes-why-left .swiper-container .swiper,
+.homes-why-bd .col-7 .homes-why-left .swiper-container .swiper {
     height: 100%;
   }
-  .homes-why-bd .col-5 .homes-why-left .swiper-container .swiper .circle, .homes-why-bd .col-7 .homes-why-left .swiper-container .swiper .circle {
+  .homes-why-bd .col-5 .homes-why-left .swiper-container .swiper .circle,
+.homes-why-bd .col-7 .homes-why-left .swiper-container .swiper .circle {
     height: 100%;
   }
-  .homes-why-bd .col-5 .homes-why-mid, .homes-why-bd .col-7 .homes-why-mid {
+  .homes-why-bd .col-5 .homes-why-mid,
+.homes-why-bd .col-7 .homes-why-mid {
     padding-right: 1.5rem;
     height: 35rem;
   }
 }
 @media screen and (max-width: 500px) {
-  .homes-why-bd .col-5, .homes-why-bd .col-7 {
+  .homes-why-bd .col-5,
+.homes-why-bd .col-7 {
     width: 100%;
   }
-  .homes-why-bd .col-5 .homes-why-left, .homes-why-bd .col-7 .homes-why-left {
+  .homes-why-bd .col-5 .homes-why-left,
+.homes-why-bd .col-7 .homes-why-left {
     padding: 0 1.5rem;
   }
-  .homes-why-bd .col-5 .homes-why-mid, .homes-why-bd .col-7 .homes-why-mid {
+  .homes-why-bd .col-5 .homes-why-mid,
+.homes-why-bd .col-7 .homes-why-mid {
     padding: 0 1.5rem;
   }
 }
@@ -15795,17 +15804,17 @@ table .status.cancle {
   }
 }
 .homes-count-num {
-  --w:35rem;
+  --w: 35rem;
   width: var(--w);
 }
 @media screen and (max-width: 1050px) {
   .homes-count-num {
-    --w:30rem;
+    --w: 30rem;
   }
 }
 @media screen and (max-width: 900px) {
   .homes-count-num {
-    --w:20rem;
+    --w: 20rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -15997,6 +16006,85 @@ table .status.cancle {
 }
 .homes-count-it:not(:first-child, :nth-child(2)) {
   border-top: 0.1rem solid rgba(220, 154, 39, 0.2);
+}
+.homes-nb-wr {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.homes-nb-wr .left {
+  width: 30%;
+}
+.homes-nb-wr .right {
+  width: 70%;
+  padding-right: calc(var(--rewidth));
+}
+.homes-nb-wr .right .head {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.homes-nb-wr .right .head .swiper-control {
+  align-items: unset;
+}
+.homes-nb-wr .right .progress {
+  position: relative;
+  height: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 4rem;
+}
+.homes-nb-wr .right .progress::after {
+  content: "";
+  position: absolute;
+  width: var(--progress);
+  left: 0;
+  height: 100%;
+  transition: 0.4s;
+}
+.homes-nb-wr .right-slider-it .content {
+  width: 40%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+}
+.homes-nb-wr .right-slider-it .content .sub {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.homes-nb-wr .right-slider-it .content .tt {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 1200px) {
+  .homes-nb-wr .right-slider-it .content .tt {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .homes-nb-wr .right-slider-it .content .tt {
+    font-size: 1.7rem;
+  }
+}
+.homes-nb-wr .right-slider-it .content .des {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.homes-nb-wr .right-slider-it .img {
+  width: 60%;
 }
 
 .prdt-left {
