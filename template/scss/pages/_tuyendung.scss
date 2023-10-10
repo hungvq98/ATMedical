@@ -1,0 +1,177 @@
+.search_select {
+    overflow: hidden;
+    background: transparent;
+    height: 2.15em;
+    width: 38.4rem;
+    max-width: 100%;
+    position: relative;
+    outline: none;
+
+    color: var(--neutral-white, #FFF);
+    font-family: Noto Sans;
+    font-size: 1.5rem;
+    line-height: 1.95rem;
+    font-style: normal;
+    font-weight: 400;
+
+    &::after {
+        width: 100%;
+        @include pseudo;
+        bottom: 0;
+        left: 0;
+        height: 0.1rem;
+        width: 100%;
+        background: $linear;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        bottom: 0;
+        right: 0.25em;
+        margin: auto;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(../assets/images/tuyendung/AltArrowDown.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    select {
+        background: transparent;
+        font-size: 1.5rem;
+        height: 3.4rem;
+        width: 38.4rem;
+        max-width: 100%;
+        color: #FFF;
+        text-shadow: 0 0 0 #000;
+        border: 0;
+        border-bottom: 1px solid #fff;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+
+
+        &:focus {
+            outline: 0;
+            background: transparent;
+        }
+
+        option {
+            max-width: 100%;
+            background: #062347;
+        }
+    }
+}
+
+.tuyendung {
+    &-info {
+        width: 100%;
+        @include flex(center, space-between);
+        margin: -1.2rem;
+    }
+
+    &-text {
+        padding: 1.2rem;
+        width: 100%;
+        color: #FFF;
+        font-family: Noto Sans;
+        font-style: normal;
+
+        &-heading {
+            font-size: 3.3rem;
+            font-weight: 600;
+            line-height: 5.1rem;
+            padding-bottom: 3.1rem;
+        }
+
+
+    }
+
+    &-img {
+        padding: 1.2rem;
+        width: 100%;
+        height: 28rem;
+        border-radius: 1rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-search {
+        @include flex(end, space-between);
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: 400;
+        align-items: end;
+
+        &-text {
+            color: rgba(255, 255, 255, 0.40);
+            font-size: 1.4rem;
+            line-height: 1.82rem;
+        }
+
+        &-ques {
+            padding-bottom: 2.25rem;
+        }
+
+        &-btn {
+            display: block;
+            bottom: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1227px) {
+    .tuyendung {
+        &-info {
+            flex-direction: column-reverse;
+            justify-content: center;
+            margin: unset;
+        }
+
+        &-search {
+            justify-content: flex-start;
+            gap: 2.4rem;
+            margin: 0 auto;
+        }
+
+        &-text {
+            padding: unset;
+        }
+
+        &-img {
+            padding: unset;
+            height: 30rem;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .tuyendung-text-heading {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .tuyendung-search {
+        flex-wrap: wrap;
+
+        &-text {
+            width: 100%;
+        }
+    }
+
+    .tuyendung-text-heading {
+        font-size: 1.8rem;
+    }
+}

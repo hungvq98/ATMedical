@@ -1,0 +1,271 @@
+@mixin lineClame($number: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+h3 {
+    padding-bottom: 2rem;
+    color: #FFF;
+    font-family: Noto Sans;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.9rem;
+}
+
+.tintuc {
+    h2 {
+        text-align: left;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.6rem;
+
+        @include lineClame;
+        background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h4 {
+        padding-bottom: 1.5rem;
+        text-align: left;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.6rem;
+
+        background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        margin-bottom: 1.8rem;
+        color: #CCC;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.6rem;
+        @include lineClame;
+    }
+
+    .tintucnoibat {
+        padding-bottom: 6rem;
+
+        &-inner {
+            margin: 0 -1.2rem;
+            @include flex;
+        }
+
+        .author {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            width: 100%;
+            color: #CCC;
+            font-family: Noto Sans;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4rem;
+            @include flex(center, unset);
+            gap: 1.2rem;
+
+            &-dot {
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: #C4C4C4;
+            }
+        }
+
+        &-left {
+            width: calc(100% / 2);
+            max-width: 100%;
+            padding: 0 1.2rem;
+
+            &-content {
+                width: 100%;
+            }
+
+
+            &-img {
+                width: 100%;
+                border-radius: 0.5rem;
+                padding-bottom: 2rem;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-right {
+            width: calc(100% / 2);
+            padding: 0 1.2rem;
+
+            &-post {
+                position: relative;
+                padding-bottom: 2.4rem;
+                width: 100%;
+                @include flex(center, unset);
+                gap: 1.6rem;
+                cursor: pointer;
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:hover h4 {
+                    background: #FFF;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            &-img {
+                max-width: 100%;
+                min-height: 12.6rem;
+                border-radius: 0.5rem;
+
+                img {
+                    max-width: 19rem;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            
+
+            &-text {
+                h4 {
+                    padding-bottom: unset;
+                    font-size: 1.8rem;
+                    line-height: 2.7rem;
+                    @include lineClame(2);
+                }
+
+                .author {
+                    padding: 1.2rem 0 1.5rem 0;
+                }
+
+                p {
+                    color: #CCC;
+                    font-family: Noto Sans;
+                    font-size: 1.4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.1rem;
+                }
+            }
+        }
+
+
+
+    }
+
+    .baivietlienquan {
+        padding-top: unset;
+
+        &-img {
+            min-height: 14rem;
+        }
+
+        &-text h4 {
+            padding-bottom: unset;
+            line-height: 3rem;
+        }
+
+        .author {
+            padding: 1.2rem 0;
+        }
+
+        &-preview {
+            line-height: 2.1rem;
+            padding-bottom: unset
+        }
+    }
+
+    .docthem-btn {
+        @include flex(center, unset);
+        gap: 0.8rem;
+
+        span {
+            color: #0068FF;
+            text-align: center;
+            font-family: Noto Sans;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4rem;
+        }
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .tintucnoibat {
+        &-left {
+            padding: 0 1.6rem;
+        }
+
+        &-right {
+            padding: 0 1.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .tintuc .tintucnoibat-right-text .author {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .tintucnoibat {
+        padding-bottom: 2rem !important;
+
+        &-inner {
+            flex-direction: column;
+        }
+
+        &-left {
+            width: 100% !important;
+            padding: unset;
+
+            &-img {
+                padding-bottom: 0;
+            }
+        }
+
+        &-right {
+            width: 100% !important;
+            padding: unset;
+            padding-top: 4rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 434px) {
+    .author {
+        flex-direction: column;
+
+        &-dot {
+            display: none;
+        }
+    }
+}
