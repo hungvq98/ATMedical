@@ -178,25 +178,9 @@ export default function SwiperModule() {
       1200: {
         slidesPerView: 4,
         spaceBetween: 24,
-        effect: "slide",
-        breakpoints: {
-            0: {
-                slidesPerView: 1.2,
-                freeMode: true,
-            },
-            500: {
-                slidesPerView: 2.2,
+        effect: "slide",}
+    }})
 
-            },
-            768: {
-                slidesPerView: 3,
-
-            },
-            1200: {
-                slidesPerView: 3,
-            }
-        },
-    })
 
   // var swiperBlogMain = new Swiper(".blog-slider-main .swiper", {
   //     slidesPerView: "auto",
