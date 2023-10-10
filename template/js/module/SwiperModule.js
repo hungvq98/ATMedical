@@ -139,7 +139,7 @@ export default function SwiperModule() {
         slidesPerView: "auto",
         spaceBetween: 0,
         effect: "slide",
-        direction:"vertical",
+        direction: "vertical",
         pagination: {
             el: ".homes-why-mid .swiper-pagination",
             clickable: true,
@@ -150,12 +150,32 @@ export default function SwiperModule() {
         slidesPerView: "auto",
         spaceBetween: 0,
         effect: "fade",
-        navigation:{
-            prevEl:".prev",
-            nextEl:".next",
+        navigation: {
+            prevEl: ".prev",
+            nextEl: ".next",
         },
         thumbs: {
-            swiper:swiperWhyThumb,
+            swiper: swiperWhyThumb,
+        }
+    });
+
+    // home why
+    var prdtThumb = new Swiper(".prdt-slider-thumb .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        pagination: {
+            el: ".prdt-slider-thumb .swiper-pagination",
+            clickable: true,
+        },
+    });
+    var prdtMain = new Swiper(".prdt-slider-main .swiper", {
+        speed: 400,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        thumbs: {
+            swiper: prdtThumb,
         }
     });
 }
