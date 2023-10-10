@@ -217,7 +217,10 @@
         }
 
         a {
-            text-decoration: underline
+            text-decoration: underline;
+            &:hover {
+                color: #1E77DF;
+            }
         }
     }
 

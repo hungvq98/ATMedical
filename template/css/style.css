@@ -14041,7 +14041,7 @@ table .status.cancle {
 }
 .prod-item .inner .img-inner {
   display: block;
-  padding-top: calc((260 / 282) * 100%);
+  padding-top: calc(260 / 282 * 100%);
   position: relative;
   overflow: hidden;
 }
@@ -14349,7 +14349,7 @@ table .status.cancle {
 }
 .book-left .inner .model-inner {
   display: block;
-  padding-top: calc((546 / 387) * 100%);
+  padding-top: calc(546 / 387 * 100%);
   position: relative;
   overflow: hidden;
   clip-path: circle(0% at 0 100%);
@@ -15416,12 +15416,6 @@ table .status.cancle {
   font-weight: 400;
   line-height: 2.6rem;
 }
-.chitiet-baiviet p .text-highlight {
-  background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .chitiet-baiviet-inner {
   width: 100%;
   display: flex;
@@ -15564,6 +15558,13 @@ table .status.cancle {
   color: #FFBE4D;
   background: var(--Gradient-2, linear-gradient(315deg, #052449 -7.5%, #509AF2 222.87%));
   border: 1px solid #052143;
+}
+
+.text-highlight {
+  background: var(--Gradient-1, linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .cohoinghenghiep {
@@ -16162,6 +16163,9 @@ h3 {
 .chitiet-tuyendung-content a {
   text-decoration: underline;
 }
+.chitiet-tuyendung-content a:hover {
+  color: #1E77DF;
+}
 .chitiet-tuyendung-btn {
   width: 100%;
   display: flex;
@@ -16352,6 +16356,163 @@ h3 {
   }
   .require-text-top {
     padding-bottom: unset;
+  }
+}
+.sc-pd {
+  padding: 0;
+  padding-bottom: 4rem;
+}
+
+.search_select {
+  overflow: hidden;
+  background: transparent;
+  height: 2.15em;
+  width: 38.4rem;
+  max-width: 100%;
+  position: relative;
+  outline: none;
+  color: var(--neutral-white, #FFF);
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  line-height: 1.95rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.search_select::after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.1rem;
+  width: 100%;
+  background: linear-gradient(90deg, #FFAF61 0.37%, #DC9A27 27.52%, #EDB31F 52.76%, #D7942A 80.98%, #B06828 100%);
+}
+.search_select:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  right: 0.25em;
+  margin: auto;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../assets/images/tuyendung/AltArrowDown.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+.search_select select {
+  background: transparent;
+  font-size: 1.5rem;
+  height: 3.4rem;
+  width: 38.4rem;
+  max-width: 100%;
+  color: #FFF;
+  text-shadow: 0 0 0 #000;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+.search_select select:focus {
+  outline: 0;
+  background: transparent;
+}
+.search_select select option {
+  max-width: 100%;
+  background: #062347;
+}
+
+.tuyendung-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -1.2rem;
+  padding-bottom: 5rem;
+}
+.tuyendung-text {
+  padding: 1.2rem;
+  width: 100%;
+  color: #FFF;
+  font-family: Noto Sans;
+  font-style: normal;
+}
+.tuyendung-text-heading {
+  font-size: 3.3rem;
+  font-weight: 600;
+  line-height: 5.1rem;
+  padding-bottom: 3.1rem;
+}
+.tuyendung-img {
+  padding: 1.2rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+.tuyendung-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tuyendung-search {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 400;
+  align-items: end;
+}
+.tuyendung-search-text {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+}
+.tuyendung-search-ques {
+  padding-bottom: 2.25rem;
+}
+.tuyendung-search-btn {
+  display: block;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1227px) {
+  .tuyendung-info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: unset;
+  }
+  .tuyendung-search {
+    justify-content: flex-start;
+    gap: 24px;
+    margin: 0 auto;
+  }
+  .tuyendung-text {
+    padding: unset;
+  }
+  .tuyendung-img {
+    padding: unset;
+    height: 300px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .tuyendung-text-heading {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 586px) {
+  .tuyendung-search {
+    flex-wrap: wrap;
+  }
+  .tuyendung-search-text {
+    width: 100%;
+  }
+  .tuyendung-text-heading {
+    font-size: 1.8rem;
   }
 }
 
