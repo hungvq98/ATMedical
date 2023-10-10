@@ -15080,7 +15080,6 @@ table .status.cancle {
 
 .chinhsach {
   padding: 9.6rem 0;
-  background-color: #052143;
   width: 100%;
 }
 .chinhsach-ctn {
@@ -15148,7 +15147,6 @@ table .status.cancle {
 }
 
 .lienhe {
-  background-color: #052143;
   padding-bottom: 12rem;
 }
 .lienhe h4 {
@@ -15379,7 +15377,6 @@ table .status.cancle {
   }
 }
 .chitiet-baiviet {
-  background-color: #062347;
   width: 100%;
   text-align: left;
   font-family: Noto Sans;
@@ -15741,9 +15738,6 @@ h3 {
   line-height: 3.9rem;
 }
 
-.tintuc {
-  background-color: #052143;
-}
 .tintuc h2 {
   text-align: left;
   font-size: 2.4rem;
