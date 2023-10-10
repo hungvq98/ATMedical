@@ -93,6 +93,69 @@ export default function SwiperModule() {
         loop: false,
         spaceBetween: 0,
         effect: "slide",
-        slidesPerView:'auto',
+        slidesPerView: 'auto',
     })
+
+
+    // home
+    var swiperHomeThumb = new Swiper(".homes-bn-thumb .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+
+    });
+    var swiperHomeTop = new Swiper(".homes-bn-top .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "fade",
+        thumbs: {
+            swiper: swiperHomeThumb,
+        },
+        pagination: {
+            el: ".homes-bn-top .swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    });
+
+    functionSlider('.homes-slider-clip', {
+        speed: 1200,
+        autoplay: {
+            delaY: 5000,
+        },
+        initialSlide: 1,
+        centeredSlides: false,
+        loop: false,
+        spaceBetween: 0,
+        effect: "slide",
+        slidesPerView: 'auto',
+    })
+
+
+    // home why
+    var swiperWhyThumb = new Swiper(".homes-why-mid .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        direction:"vertical",
+        pagination: {
+            el: ".homes-why-mid .swiper-pagination",
+            clickable: true,
+        },
+    });
+    var swiperWhyMain = new Swiper(".homes-why-left .swiper", {
+        speed: 1200,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "fade",
+        navigation:{
+            prevEl:".prev",
+            nextEl:".next",
+        },
+        thumbs: {
+            swiper:swiperWhyThumb,
+        }
+    });
 }
