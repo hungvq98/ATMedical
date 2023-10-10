@@ -74,15 +74,13 @@
     &-element {
         padding: 1.6rem;
         padding-bottom: 4.4rem;
-        width: (100% / 2);
+        width: calc(100% / 2);
 
         &:nth-child(5) {
             width: 100%;
             padding-bottom: 6rem;
         }
     }
-
-    &-text {}
 
     input {
         width: 100%;

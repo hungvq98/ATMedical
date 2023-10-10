@@ -15445,7 +15445,7 @@ table .status.cancle {
   font-weight: 400;
   line-height: 1.4rem;
   display: flex;
-  align-items: unset;
+  align-items: center;
   justify-content: unset;
   gap: 1.2rem;
 }
@@ -15804,7 +15804,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: unset;
-  gap: 12px;
+  gap: 1.2rem;
 }
 .tintuc .tintucnoibat .author-dot {
   width: 0.5rem;
@@ -15815,14 +15815,14 @@ h3 {
 .tintuc .tintucnoibat-left {
   width: 50%;
   max-width: 100%;
-  padding: 0 12px;
+  padding: 0 1.2rem;
 }
 .tintuc .tintucnoibat-left-content {
   width: 100%;
 }
 .tintuc .tintucnoibat-left-img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   padding-bottom: 2rem;
 }
 .tintuc .tintucnoibat-left-img img {
@@ -15859,7 +15859,7 @@ h3 {
 .tintuc .tintucnoibat-right-img {
   max-width: 100%;
   min-height: 12.6rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 .tintuc .tintucnoibat-right-img img {
   max-width: 19rem;
@@ -16483,7 +16483,7 @@ h3 {
   }
   .tuyendung-search {
     justify-content: flex-start;
-    gap: 24px;
+    gap: 2.4rem;
     margin: 0 auto;
   }
   .tuyendung-text {
@@ -16491,8 +16491,8 @@ h3 {
   }
   .tuyendung-img {
     padding: unset;
-    height: 300px;
-    padding-bottom: 20px;
+    height: 30rem;
+    padding-bottom: 2rem;
   }
 }
 @media only screen and (max-width: 800px) {
