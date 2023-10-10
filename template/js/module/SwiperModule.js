@@ -448,5 +448,24 @@ export default function SwiperModule() {
 
     // 
 
+    var prdtThumb = new Swiper(".prdt-slider-thumb .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        pagination: {
+            el: ".prdt-slider-thumb .swiper-pagination",
+            clickable: true,
+        },
+    });
+    var prdtMain = new Swiper(".prdt-slider-main .swiper", {
+        speed: 400,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        thumbs: {
+            swiper: prdtThumb,
+        }
+    });
+
 }
 
