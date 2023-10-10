@@ -6,17 +6,18 @@
 .swiper-pagination {
     position: static;
     margin-top: 1.6rem;
-    
+
     &-bullet {
         --circle: -1rem;
         background-color: #293D55;
         opacity: 0.5;
         position: relative;
-        margin:0 calc(-1*var(--circle)) !important;
+        margin: 0 calc(-1*var(--circle)) !important;
         width: 4rem;
         height: 0.4rem;
         border-radius: 0;
-        &-active {  
+
+        &-active {
             background: $linear;
             opacity: 1;
 
@@ -32,14 +33,21 @@
     align-items: center;
     gap: 1.6rem;
     --size: 4rem;
+
     @include max(1250px) {
-        --size:2.5rem;
+        --size: 2.5rem;
     }
+
+    .swiper-next {
+        img {
+            transform: translateX(-0.1rem);
+        }
+    }
+
     &-btn {
         width: var(--size);
         height: var(--size);
         border-radius: 100rem;
-        background-color: $color-pri;
         @include mid-flex;
         cursor: pointer;
         @include transitionRe;
@@ -47,9 +55,12 @@
         position: relative;
         overflow: hidden;
         font-size: 1.6rem;
-        background: transparent;
-        @include affter($color-pri);
-        border: 0.1rem solid $color-pri;
+        @include affter($linear);
+        border: 0.1rem solid $color-second;
+
+        img {
+            filter: brightness(0) invert(1);
+        }
 
         &::after {
             width: 100%;
@@ -61,9 +72,12 @@
         }
 
         &.swiper-button-disabled {
-            background: white;
+            background: $color-opa-white-02;
             cursor: default;
             box-shadow: none;
+            img {
+                filter: none;
+            }
             &::after {
                 width: 0;
             }
@@ -128,7 +142,7 @@
             }
         }
 
-        
+
         &.mobile-midle-plus {
             @include max(1350px) {
                 .swiper-prev {
@@ -146,13 +160,13 @@
         &.verti {
             .swiper-prev {
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 top: 0;
             }
 
             .swiper-next {
                 left: 50%;
-                transform: translate(-50%,50%);
+                transform: translate(-50%, 50%);
                 top: unset;
                 bottom: 0;
             }

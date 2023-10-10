@@ -139,7 +139,7 @@ export default function SwiperModule() {
         slidesPerView: "auto",
         spaceBetween: 0,
         effect: "slide",
-        direction:"vertical",
+        direction: "vertical",
         pagination: {
             el: ".homes-why-mid .swiper-pagination",
             clickable: true,
@@ -150,12 +150,181 @@ export default function SwiperModule() {
         slidesPerView: "auto",
         spaceBetween: 0,
         effect: "fade",
-        navigation:{
-            prevEl:".prev",
-            nextEl:".next",
+        navigation: {
+            prevEl: ".homes-why-left .prev",
+            nextEl: ".homes-why-left .next",
         },
         thumbs: {
-            swiper:swiperWhyThumb,
+            swiper: swiperWhyThumb,
         }
     });
+
+    // home 
+    var swiperHomeProdTh = new Swiper(".left-slider .swiper", {
+        speed: 1200,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        allowTouchMove: false,
+    });
+    const homeProdprogress = document.querySelector('.homes-nb .progress-line')
+    var swiperHomeProd = new Swiper(".right-slider .swiper", {
+        speed: 1200,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "fade",
+        navigation: {
+            prevEl: ".homes-nb .swiper-prev",
+            nextEl: ".homes-nb .swiper-next",
+        },
+        thumbs: {
+            swiper: swiperHomeProdTh,
+        },
+        on: {
+            init: function (e) {
+                const totalSlide = document.querySelectorAll(".homes-nb .right .swiper-slide")
+                let progress = 100 / (totalSlide.length);
+                let percent = (e.realIndex + 1) * progress;
+                homeProdprogress.style = `--progress: ${percent}%`
+            },
+            slideChange: function (e) {
+                const totalSlide = document.querySelectorAll(".homes-nb .right .swiper-slide")
+                let progress = 100 / (totalSlide.length);
+                let percent = (e.realIndex + 1) * progress;
+                homeProdprogress.style = `--progress: ${percent}%`
+            },
+        }
+    });
+
+
+    // home vid
+    var swiperVidThumb = new Swiper(".homes-vid-thumb .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        allowTouchMove:false,
+    });
+    var swiperVidMain = new Swiper(".homes-vid-main .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        effect: "slide",
+        thumbs: {
+            swiper: swiperVidThumb,
+        }
+    });
+
+
+    // home customer
+    var swiperCusTh = new Swiper(".homes-cus-verti .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        speed: 1200,
+        effect: "slide",
+        direction: "vertical",
+        allowTouchMove: false,
+        pagination: {
+            el: ".homes-cus-verti .swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                direction: "horizontal",
+                allowTouchMove: false,
+            },
+            681: {
+                direction: "vertical",
+            }
+        }
+    });
+    const homesCusPr = document.querySelector('.homes-cus-progress .progress')
+    let xOfset = -30;
+    let yOfset = 30;
+    var quality_sw = new Swiper(".homes-cus-cover .swiper", {
+        effect: "creative",
+        // slidesPerView: 1,
+        // centerInsufficientSlides: true,
+        // initialSlide: 3,
+        // loopAdditionalSlides: 1,
+        // allowTouchMove: false,
+        pagination: {
+            el: ".homes-cus-cover .swiper-pagination",
+            type: "fraction",
+        },
+        loop: false,
+        centeredSlides: true,
+        speed: 1200,
+        slidesPerView: "auto",
+        creativeEffect: {
+            limitProgress: 4,
+            perspective: true,
+            prev: {
+                opacity: 0,
+                translate: [0, "20%", 1],
+            },
+            next: {
+                translate: [xOfset, yOfset, -1],
+            },
+        },
+        breakpoints: {
+            0: {
+                creativeEffect: {
+                    limitProgress: 1,
+                    perspective: false,
+                    prev: {
+                        opacity: 0,
+                        translate: ["-100%", 0, 0],
+                    },
+                    next: {
+                        translate: ["100%", 0, 0],
+                    },
+                },
+            },
+            900: {
+                creativeEffect: {
+                    limitProgress: 4,
+                    perspective: true,
+                    prev: {
+                        opacity: 0,
+                        translate: [0, "20%", 1],
+                    },
+                    next: {
+                        translate: [xOfset, yOfset, -1],
+                    },
+                },
+            }
+        },
+        thumbs: {
+            swiper: swiperCusTh
+        },
+        navigation: {
+            nextEl: ".homes-cus-cover .swiper-next",
+            prevEl: ".homes-cus-cover .swiper-prev",
+        },
+        on: {
+            init: function (e) {
+                const totalSlide = document.querySelectorAll(".homes-cus-cover .swiper-slide")
+                const total = document.querySelector('.homes-cus-progress .total')
+                if (totalSlide.length < 10) {
+                    total.innerHTML = '0' + totalSlide.length
+                } else {
+                    total.innerHTML = totalSlide.length
+                }
+
+                // 
+
+                let progress = 100 / (totalSlide.length);
+                let percent = (e.realIndex + 1) * progress;
+                homesCusPr.style = `--progress: ${percent}%`
+            },
+            slideChange: function (e) {
+                const totalSlide = document.querySelectorAll(".homes-cus-cover .swiper-slide")
+                let progress = 100 / (totalSlide.length);
+                let percent = (e.realIndex + 1) * progress;
+                homesCusPr.style = `--progress: ${percent}%`
+            },
+        }
+    });
+
+    // 
+
 }

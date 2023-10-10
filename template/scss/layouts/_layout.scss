@@ -165,7 +165,10 @@
     width: 3rem;
     height: 3rem;
     border-radius: 100rem;
-    background-color: $color-pri;
+    background-color: $color-second;
+}
+.fancybox__thumbs {
+    display: none;
 }
 
 // 
@@ -953,6 +956,9 @@
 
         @include max(600px) {
             font-size: 1.6rem;
+        }
+        @include max(500px) {
+            font-size: 1.2rem;
         }
 
         .line {
