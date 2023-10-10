@@ -3,6 +3,11 @@
     align-items: $ai;
     justify-content: $jc;
 }
+@mixin textStyle() {
+    color: #FFF;
+    font-family: Noto Sans;
+    font-style: normal;
+}
 
 
 .chitiet-baiviet {
