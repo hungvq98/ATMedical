@@ -15999,4 +15999,43 @@ table .status.cancle {
   border-top: 0.1rem solid rgba(220, 154, 39, 0.2);
 }
 
+.prdt-left {
+  width: 38rem;
+}
+.prdt-midle {
+  flex: 1;
+}
+.prdt-right {
+  width: 28rem;
+}
+.prdt-img {
+  display: block;
+  padding-top: calc((80 / 88) * 100%);
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
+.prdt-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+}
+.prdt-slider-main .swiper {
+  --col-gap: 0;
+  border: 0.3rem solid #FFAF61;
+  border-radius: 0.6rem;
+}
+.prdt-slider-thumb {
+  margin-top: 1rem;
+}
+.prdt-slider-thumb .swiper {
+  --col-gap: 1rem;
+}
+.prdt-slider-thumb .prdt-img {
+  border-radius: 0.6rem;
+}
+
 /*# sourceMappingURL=style.css.map */

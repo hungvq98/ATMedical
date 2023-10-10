@@ -1,0 +1,46 @@
+.prdt {
+    &-left {
+        width: 38rem;
+    }
+
+    &-midle {
+        flex: 1;
+    }
+
+    &-right {
+        width: 28rem;
+    }
+
+    &-img {
+        @include imgPd(80, 88);
+        background-color: white;
+
+        img {
+            @include mid;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &-slider {
+        &-main {
+            .swiper {
+                --col-gap: 0;
+                border: .3rem solid #FFAF61;
+                border-radius: .6rem;
+            }
+        }
+
+        &-thumb {
+            margin-top: 1rem;
+
+            .swiper {
+                --col-gap: 1rem;
+            }
+
+            .prdt-img {
+                border-radius: .6rem;
+            }
+        }
+    }
+}
