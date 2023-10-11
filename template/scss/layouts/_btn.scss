@@ -140,6 +140,36 @@
             }
         }
     }
+    &-second {
+        @extend .btn;
+        background: $color-second;
+        border: 0.1rem solid #D7942A;
+        &::after {
+            background: $color-pri;
+        }
+
+        .txt {
+            color: $color-pri;
+        }
+
+        .icon {
+            i {
+                color: $color-white;
+            }
+        }
+
+        @include hover {
+            .txt {
+                color: $color-second;
+            }
+
+            .icon {
+                i {
+                    color: $color-pri
+                }
+            }
+        }
+    }
 }
 
 .info-see {
