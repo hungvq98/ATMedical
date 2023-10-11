@@ -39,12 +39,12 @@
 
         &-left {
             padding: 1.2rem;
-            width: (100% / 2);
+            width: calc(100% / 2);
         }
 
         &-right {
             padding: 1.2rem;
-            width: (100% / 2);
+            width: calc(100% / 2);
             display: flex;
             justify-content: right;
         }
