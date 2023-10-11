@@ -41,10 +41,12 @@
         position: relative;
         border-radius: 1.6rem;
         border-radius: 1rem;
+
         &-wrapper {
             overflow: hidden;
             border-radius: 1rem;
         }
+
         &.med {
             width: 90rem;
         }
@@ -59,6 +61,7 @@
         min-height: 40vh;
         max-height: 80vh;
     }
+
     &-wrapper {
         background-color: $color-pri;
         width: 100%;
@@ -172,5 +175,108 @@
         }
 
         .mona-search-form {}
+    }
+
+    &-bking {
+        &-box {
+            max-height: 99vh;
+            width: 120rem;
+            .popup-wrapper {
+                background-color: transparent;
+            }
+        }
+        &-f {
+            width: calc(8/12*100%);
+            margin-left: auto;
+            position: relative;
+            
+            .model {
+                position: absolute;
+                width: calc(4/12*100%);
+                right: calc(100% - 2rem);
+                &-inner {
+                    @include imgPd(656,503);
+                    img {
+                        @include imgContain;
+                    }
+                }
+            }
+            .tt {
+                font-size: 12rem;
+                background: $linear;
+                @include txt-ln;
+                @include font-third;
+                line-height: 1.4;
+                padding-left: 0.3rem;
+                margin-bottom: 3.2rem;
+                transition: 0.8s;
+                text-align: center;
+                @include max(900px) {
+                    font-size: 12rem;
+                }
+                @include max(820px) {
+                    font-size: 7rem;
+                }
+            }
+            .box {
+                background-color: $color-white;
+                padding:3rem 2rem;
+                border-radius: 1rem;
+                position: relative;
+                margin-top: -4rem;
+                .sub {
+                    color: $color-pri;
+                    @include fz-24;
+                    font-weight: 700;
+                    text-align: center;
+                    margin: auto;
+                    margin-bottom: 3rem;
+                    @include max(820px) {
+                        @include fz-16;
+                        margin-bottom: 1rem;    
+                    }
+                    @include max(400px) {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+                .form {
+                    &-list {
+
+                    }
+                    &-ip {
+                        .text {
+                            color: $color-pri;
+                            font-weight: 700;
+                            margin-bottom: 0.5rem;
+                            @include max(400px) {
+                                font-size: 1.4rem;
+                            }
+                            &::before {
+                                background-color: $color-border-01;
+                            }
+                        }
+                        @include max(800px) {
+                            textarea {
+                                min-height: unset;
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    width: 100%;
+                }
+            }
+            @include max(820px) {
+                width: 100%;
+                .model {
+                    display: none;
+                }
+            }
+        }
+        .bg {
+            display: none;
+        }
     }
 }
