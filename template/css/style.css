@@ -15049,6 +15049,13 @@ table .status.cancle {
   margin-top: 3.2rem;
 }
 
+.sticky {
+  position: sticky !important;
+  top: 6rem;
+  left: 1.6rem;
+  width: 100%;
+}
+
 .chinhsach h3 {
   color: #FFF;
   font-family: "Noto Sans";
@@ -15088,15 +15095,20 @@ table .status.cancle {
   margin: 0 auto;
 }
 .chinhsach-content {
-  margin: -2rem;
+  margin: -1rem;
   display: flex;
   justify-content: center;
 }
 .chinhsach-left {
+  width: 100%;
+  max-width: 30rem;
+}
+.chinhsach-left-inner {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 30rem;
+  max-width: 100%;
   gap: 2.4rem;
   padding: 2rem;
 }
@@ -15110,12 +15122,14 @@ table .status.cancle {
   padding: 1.6rem 2.4rem;
   border-radius: 10rem;
   background: rgba(182, 111, 41, 0.08);
+  transition: 0.4s;
 }
 .chinhsach-btn.active {
   border: 1px solid #B66F29;
 }
 .chinhsach-btn:hover {
   border: 1px solid #B66F29;
+  transition: 0.4s;
 }
 .chinhsach-right {
   width: 100%;
@@ -15249,11 +15263,13 @@ table .status.cancle {
   font-style: normal;
   font-weight: 700;
   line-height: 2.88rem;
+  transition: 0.4s;
 }
 .guithongtin-btn:hover {
   color: #FFBE4D;
   background: var(--Gradient-2, linear-gradient(315deg, #052449 -7.5%, #509AF2 222.87%));
   border: 1px solid #052143;
+  transition: 0.4s;
 }
 
 .company-text {
@@ -15383,6 +15399,14 @@ table .status.cancle {
     padding-top: 3.2rem;
   }
 }
+@media screen and (max-width: 425px) {
+  .form-lienhe-element {
+    padding-bottom: 0.4rem;
+  }
+  .form-lienhe-element:nth-child(5) {
+    padding-bottom: 0.4rem;
+  }
+}
 .chitiet-baiviet {
   width: 100%;
   text-align: left;
@@ -15447,6 +15471,7 @@ table .status.cancle {
   display: flex;
   align-items: center;
   justify-content: unset;
+  min-width: fit-content;
   gap: 1.2rem;
 }
 .chitiet-baiviet-left .author-dot {
@@ -15466,6 +15491,11 @@ table .status.cancle {
 }
 .chitiet-baiviet-left .page-numbers {
   justify-content: start;
+}
+@media screen and (max-width: 1024px) {
+  .chitiet-baiviet-left .page-numbers {
+    margin-top: 0;
+  }
 }
 .chitiet-baiviet-right {
   width: 33.3333333333%;
@@ -15514,6 +15544,11 @@ table .status.cancle {
 .chitiet-baiviet-right .form-lienhe-element {
   padding-bottom: 3.9rem;
   width: 100%;
+}
+@media screen and (max-width: 434px) {
+  .chitiet-baiviet-right .form-lienhe-element {
+    padding-bottom: 1.9rem;
+  }
 }
 .chitiet-baiviet-right .form-lienhe input {
   width: 100%;
@@ -15665,10 +15700,16 @@ table .status.cancle {
   padding-bottom: 3rem;
   width: 100%;
   display: flex;
-  align-items: unset;
+  align-items: center;
   justify-content: unset;
   gap: 1.6rem;
   cursor: pointer;
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-post {
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 .baivietlienquan-post a {
   position: absolute;
@@ -15684,24 +15725,77 @@ table .status.cancle {
   -webkit-text-fill-color: transparent;
 }
 .baivietlienquan-img {
-  max-width: 100%;
+  width: 21rem;
   border-radius: 0.5rem;
 }
+@media screen and (max-width: 434px) {
+  .baivietlienquan-img {
+    width: 15rem;
+    height: 100%;
+  }
+}
 .baivietlienquan-img img {
-  max-width: 21rem;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.baivietlienquan-text {
+  flex: 1;
+}
 .baivietlienquan-text h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   padding-bottom: unset;
 }
+@media screen and (max-width: 434px) {
+  .baivietlienquan-text h4 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-text .author {
+    font-size: 1.2rem;
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 343px) {
+  .baivietlienquan-text .author {
+    flex-direction: column;
+    align-items: start;
+    font-size: 1rem;
+    gap: 0;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+  }
+  .baivietlienquan-text .author-dot {
+    display: none;
+  }
+}
 .baivietlienquan-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   color: #CCC;
   font-family: Noto Sans;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.1rem;
+}
+@media screen and (max-width: 637px) {
+  .baivietlienquan-text p {
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-text p {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 1132px) {
@@ -15723,14 +15817,14 @@ table .status.cancle {
     padding: unset;
     padding-top: 2rem;
   }
+  .chitiet-baiviet-right .form-lienhe-element {
+    padding-bottom: 1.9rem;
+  }
   .form-banner-bg {
     display: none;
   }
   .chitiet-baiviet-right .form-lienhe {
     margin: unset;
-  }
-  .chitiet-baiviet-right .form-lienhe-element {
-    padding-bottom: 3.9rem;
   }
 }
 h3 {
@@ -15843,6 +15937,12 @@ h3 {
   gap: 1.6rem;
   cursor: pointer;
 }
+@media screen and (max-width: 419px) {
+  .tintuc .tintucnoibat-right-post {
+    padding-bottom: 0.8rem;
+    gap: 0.6rem;
+  }
+}
 .tintuc .tintucnoibat-right-post a {
   position: absolute;
   top: 0;
@@ -15857,26 +15957,54 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 .tintuc .tintucnoibat-right-img {
-  max-width: 100%;
-  min-height: 12.6rem;
+  width: 19rem;
   border-radius: 0.5rem;
 }
+@media screen and (max-width: 419px) {
+  .tintuc .tintucnoibat-right-img {
+    width: 15rem;
+  }
+}
 .tintuc .tintucnoibat-right-img img {
-  max-width: 19rem;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.tintuc .tintucnoibat-right-text {
+  flex: 1;
+}
 .tintuc .tintucnoibat-right-text h4 {
-  padding-bottom: unset;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  padding-bottom: unset;
 }
-.tintuc .tintucnoibat-right-text .author {
-  padding: 1.2rem 0 1.5rem 0;
+@media screen and (max-width: 434px) {
+  .tintuc .tintucnoibat-right-text h4 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 434px) {
+  .tintuc .tintucnoibat-right-text .author {
+    font-size: 1.2rem;
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 347px) {
+  .tintuc .tintucnoibat-right-text .author {
+    flex-direction: column;
+    align-items: start;
+    font-size: 1rem;
+    gap: 0;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+  }
+  .tintuc .tintucnoibat-right-text .author-dot {
+    display: none;
+  }
 }
 .tintuc .tintucnoibat-right-text p {
   color: #CCC;
@@ -15885,23 +16013,6 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 2.1rem;
-}
-.tintuc .baivietlienquan {
-  padding-top: unset;
-}
-.tintuc .baivietlienquan-img {
-  min-height: 14rem;
-}
-.tintuc .baivietlienquan-text h4 {
-  padding-bottom: unset;
-  line-height: 3rem;
-}
-.tintuc .baivietlienquan .author {
-  padding: 1.2rem 0;
-}
-.tintuc .baivietlienquan-preview {
-  line-height: 2.1rem;
-  padding-bottom: unset;
 }
 .tintuc .docthem-btn {
   display: flex;
@@ -15918,9 +16029,126 @@ h3 {
   font-weight: 400;
   line-height: 1.4rem;
 }
+@media screen and (max-width: 434px) {
+  .tintuc .docthem-btn span {
+    font-size: 1.2rem;
+  }
+}
 .tintuc .docthem-btn img {
   width: 2rem;
   height: 2rem;
+}
+
+.baivietlienquan h3 {
+  padding-bottom: 2rem;
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.9rem;
+}
+.baivietlienquan-post {
+  position: relative;
+  padding-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-post {
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+.baivietlienquan-post a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.baivietlienquan-post:hover h4 {
+  background: #FFF;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.baivietlienquan-img {
+  width: 21rem;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-img {
+    width: 15rem;
+    height: 100%;
+  }
+}
+.baivietlienquan-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.baivietlienquan-text {
+  flex: 1;
+}
+.baivietlienquan-text h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-bottom: unset;
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-text h4 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-text .author {
+    font-size: 1.2rem;
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 347px) {
+  .baivietlienquan-text .author {
+    flex-direction: column;
+    align-items: start;
+    font-size: 1rem;
+    gap: 0;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+  }
+  .baivietlienquan-text .author-dot {
+    display: none;
+  }
+}
+.baivietlienquan-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #CCC;
+  font-family: Noto Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.1rem;
+}
+@media screen and (max-width: 637px) {
+  .baivietlienquan-text p {
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (max-width: 434px) {
+  .baivietlienquan-text p {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -15931,12 +16159,7 @@ h3 {
     padding: 0 1.6rem;
   }
 }
-@media screen and (max-width: 834px) {
-  .tintuc .tintucnoibat-right-text .author {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 833px) {
   .tintucnoibat {
     padding-bottom: 2rem !important;
   }
@@ -15953,18 +16176,10 @@ h3 {
   .tintucnoibat-right {
     width: 100% !important;
     padding: unset;
-    padding-top: 4rem !important;
+    padding-top: 2rem !important;
   }
 }
-@media screen and (max-width: 434px) {
-  .author {
-    flex-direction: column;
-  }
-  .author-dot {
-    display: none;
-  }
-}
-.overlay {
+.chitiet-tuyendung-overlay {
   visibility: hidden;
   opacity: 0;
   position: fixed;
@@ -15977,7 +16192,7 @@ h3 {
   z-index: 8;
 }
 
-.open {
+.chitiet-tuyendung-open {
   opacity: 1 !important;
   visibility: visible !important;
 }
@@ -15988,9 +16203,6 @@ h3 {
   position: fixed;
   width: 100%;
   max-width: 58.8rem;
-  top: 0;
-  left: 0;
-  right: 0;
   border-radius: 1rem;
   top: 50%;
   left: 50%;
@@ -16181,7 +16393,6 @@ h3 {
 }
 .chitiet-tuyendung-btn-right .chitiet-tuyendung-btn-inner:last-child {
   padding-top: 2.1rem;
-  padding-bottom: 4rem;
 }
 .chitiet-tuyendung-btn-right .share-social {
   justify-content: center;
@@ -16273,9 +16484,11 @@ h3 {
   .chitiet-tuyendung-left {
     width: 100%;
   }
+  .chitiet-tuyendung-btn-right {
+    display: none;
+  }
   .chitiet-tuyendung-right {
     width: 100%;
-    display: none;
   }
   .chitiet-tuyendung-content {
     width: 100%;
@@ -16353,6 +16566,22 @@ h3 {
   }
   .require-text-top {
     padding-bottom: unset;
+  }
+}
+@media screen and (max-width: 372px) {
+  .require-inner {
+    width: 100%;
+  }
+  .require-text {
+    display: block;
+  }
+  .require-text-top {
+    padding-bottom: unset;
+  }
+}
+@media screen and (max-width: 358px) {
+  .chitiet-tuyendung h3 {
+    font-size: 2rem;
   }
 }
 #closepopup {

@@ -4,20 +4,20 @@ export default function OpenClosePopup() {
     try {
         const popup1 = document.getElementById("openpopup1");
         popup1.addEventListener("click", function () {
-            document.querySelector(".overlay").classList.toggle("open");
-            document.querySelector(".popup-nophoso").classList.toggle("open");
+            document.querySelector(".chitiet-tuyendung-overlay").classList.toggle("chitiet-tuyendung-open");
+            document.querySelector(".popup-nophoso").classList.toggle("chitiet-tuyendung-open");
         });
         
         const popup = document.getElementById("openpopup");
         popup.addEventListener("click", function () {
-            document.querySelector(".overlay").classList.toggle("open");
-            document.querySelector(".popup-nophoso").classList.toggle("open");
+            document.querySelector(".chitiet-tuyendung-overlay").classList.toggle("chitiet-tuyendung-open");
+            document.querySelector(".popup-nophoso").classList.toggle("chitiet-tuyendung-open");
         });
         
         const closePopup = document.getElementById("closepopup");
         closePopup.addEventListener("click", function () {
-            document.querySelector(".overlay").classList.remove("open");
-            document.querySelector(".popup-nophoso").classList.remove("open");
+            document.querySelector(".chitiet-tuyendung-overlay").classList.remove("chitiet-tuyendung-open");
+            document.querySelector(".popup-nophoso").classList.remove("chitiet-tuyendung-open");
         });
         
     } catch (error) {

@@ -1,4 +1,4 @@
-.overlay {
+.chitiet-tuyendung-overlay {
     visibility: hidden;
     opacity: 0;
     position: fixed;
@@ -11,7 +11,7 @@
     z-index: 8;
 }
 
-.open {
+.chitiet-tuyendung-open {
     opacity: 1 !important;
     visibility: visible !important;
 }
@@ -23,9 +23,6 @@
         position: fixed;
         width: 100%;
         max-width: 58.8rem;
-        top: 0;
-        left: 0;
-        right: 0;
         border-radius: 1rem;
 
         top: 50%;
@@ -239,7 +236,6 @@
 
             .chitiet-tuyendung-btn-inner:last-child {
                 padding-top: 2.1rem;
-                padding-bottom: 4rem;
             }
 
             .share-social {
@@ -356,9 +352,11 @@
             width: 100%;
         }
 
+        &-btn-right {
+            display: none;
+        }
         &-right {
             width: 100%;
-            display: none;
         }
 
         &-content {
@@ -447,7 +445,7 @@
         flex-direction: column;
         align-items: center;
     }
-
+    
     .require {
         &-inner {
             width: 100%;
@@ -464,6 +462,28 @@
     }
 }
 
+@media screen and (max-width: 372px) {
+    .require {
+        &-inner {
+            width: 100%;
+        }
+    
+        &-text {
+            display: block;
+    
+            &-top {
+                padding-bottom: unset;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 358px) {
+    .chitiet-tuyendung h3 {
+        font-size: 2rem;
+    }
+}
 #closepopup {
     cursor: pointer;
 }
+
